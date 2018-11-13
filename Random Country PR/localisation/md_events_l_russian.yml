@@ -1,0 +1,12 @@
+﻿l_russian:
+ md_news.1.t:0 "Restoration of the Iberian Union"
+ md_news.1.desc:0 "Since the death of Phillip IV of Spain, the Iberian Peninsula has been separated again following the end of the union of the Spanish and Portuguese people. Now, using the necessary means at their disposal, [From.GetOldName] has unified not just the men, but the women and children too of the Iberian Peninsula. The new government has stressed unity and pan nationalism above all other forms of policy for this unified region. \n\nNow, the newly established [From.GetNameDef] has proclaimed the restoration of this union to validate their claim to both states. Time will tell on the stability and future of the new Iberia."
+ md_news.1.a:0 "For the good of the Peninsula"
+ md_news.1.b:0 "For the best, perhaps."
+ md_news.1.c:0 "It will not last long!"
+ ira.1.t:0 "Irish Raid Weapon Depot!"
+ ira.1.d:0 "The IRA have long been known for their insurgency in Northern Ireland, yet their most audacious move in recent years came as a shock to authorities in both Dublin and London. In the early hours of the morning, multiple IRA terrorists launched a mettlesome strike at the British Army depot in Londonderry, Northern Ireland. \n\nWhilst nobody was killed in the ensuing engagement, the terrorists managed to escape with enough small arms to present a serious warning to the Empire. Increasing Catholic unrest as an immediate side effect has already been reported on the towns bordering the Republic of Ireland. Time will tell what implications this has for the future."
+ ira.1.a:0 "Hah!"
+ ira.2.t:0 "Riots in Northern Ireland!"
+ ira.2.d:0 "Ireland has long been an island of troubles and turmoil. With the end of the Irish civil war in 1923, it has been hoped by many that peace has come to the island. This illusion was shattered today in Belfast, where Catholic Pro-Unionists attacked a Protestant gathering in the middle of the city. Escalation soon followed, with the Catholic parts of the city out on the streets, aided by the Irish Republican Army in a frenzy of destruction and looting. \n\nIt was only until late into the night when the final rioters were subdued, with the Royal Ulster Constabulary aided by the stationed Armed Forces soldiers pacifying the miscreants. Unconfirmed reports claim excessive violence on both sides, with large areas of the city suffering property damage. The brutality of the actions of the British have been condemned by the Irish government, who themselves have been accused of funding the terrorist IRA. Tensions remain high."
+ ira.2.a:0 "Aha!"

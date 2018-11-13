@@ -1,0 +1,524 @@
+ideas = {
+	
+	political_advisor = {
+		fortification_engineer = {
+		
+		picture = GFX_fortification_engineer
+			
+			traits = { fortification_engineer }
+		}
+		
+		armaments_organizer = {
+		
+		picture = GFX_armaments_organizer
+			
+			traits = { armaments_organizer }
+		}
+		
+		captain_of_industry = {
+		
+		picture = GFX_captain_of_industry
+		
+			traits = { captain_of_industry }
+		}
+		
+		war_industrialist = {
+		
+		picture = GFX_war_industrialist
+		
+			traits = { war_industrialist }
+		}
+
+		communist_revolutionary = {
+		
+		picture = GFX_communist_revolutionary
+			
+			traits = { communist_revolutionary }
+
+			do_effect = {
+				NOT = {
+					has_government = communism
+				}
+			}
+		}	
+			
+		democratic_reformer = {
+		
+		picture = GFX_democratic_reformer
+			
+			traits = { democratic_reformer }
+
+			do_effect = {
+				NOT = {
+					has_government = democratic
+				}
+			}
+		}
+		
+		fascist_demagogue = {
+		
+		picture = GFX_fascist_demagogue
+			
+			traits = { fascist_demagogue}
+			
+			do_effect = {
+				NOT = {
+					has_government = fascism
+				}
+			}
+		}
+		
+		silent_workhorse = {
+		
+		picture = GFX_silent_workhorse
+			
+			traits = { silent_workhorse }
+		}
+		
+		prince_of_terror = {
+			
+			traits = { prince_of_terror }
+		}
+		
+		silent_workhorse2 = {
+			
+			traits = { silent_workhorse }
+		}
+		
+		backroom_backstabber = {
+			
+			traits = { backroom_backstabber }
+		}
+		
+		smooth_talking_charmer = {
+			
+			traits = { smooth_talking_charmer }
+		}
+	}
+
+	
+	# TECHNOLOGY
+	tank_manufacturer = { 
+		
+		designer = yes
+		
+		heavy_tank_manufacturer = {
+			
+			research_bonus = {
+				armor = 0.10
+			}
+			
+			traits = { heavy_tank_manufacturer }
+
+		}
+		
+		fast_tank_manufacturer = {
+			
+			research_bonus = {
+				armor = 0.10
+			}
+			
+			traits = { fast_tank_manufacturer }
+		}
+		
+		medium_tank_manufacturer = {
+			
+			research_bonus = {
+				armor = 0.10
+			}
+			
+			traits = { medium_tank_manufacturer }
+		}
+	}
+	
+	naval_manufacturer = { 
+		
+		designer = yes
+		
+		atlantic_fleet_naval_manufacturer = {
+			
+			research_bonus = {
+				naval_equipment = 0.10
+			}
+			
+			equipment_bonus = {
+				
+			}
+			
+			traits = { atlantic_fleet_naval_manufacturer }
+			
+		}
+		
+		raiding_fleet_naval_manufacturer = {
+			
+			research_bonus = {
+				naval_equipment = 0.10
+			}
+			
+			traits = { raiding_fleet_naval_manufacturer }
+			
+		}	
+	}
+	
+	aircraft_manufacturer = { 
+			
+		designer = yes
+		
+		light_aircraft_manufacturer = {
+			
+			research_bonus = {
+				air_equipment = 0.10
+			}
+			
+			traits = { light_aircraft_manufacturer }
+		}
+		
+		CAS_manufacturer = { 
+						
+			research_bonus = {
+				air_equipment = 0.10
+			}
+			
+			traits = { CAS_manufacturer }
+			
+			equipment_bonus = {
+				
+			}
+		}	
+		
+
+		medium_aircraft_manufacturer = { 
+			
+						
+			research_bonus = {
+				air_equipment = 0.10
+			}
+			
+			traits = { medium_aircraft_manufacturer }
+		}
+		
+		heavy_aircraft_manufacturer = {
+			
+			
+			research_bonus = {
+				air_equipment = 0.10
+			}
+			
+			traits = { heavy_aircraft_manufacturer }
+		}
+		
+		naval_aircraft_manufacturer = {
+			
+						
+			research_bonus = {
+				air_equipment = 0.10
+			}
+			
+			traits = { naval_aircraft_manufacturer }
+		}	
+
+
+	}
+	
+	industrial_concern = {
+		
+		refinery_concern = {
+			
+			research_bonus = {
+				industry = 0.05
+				synth_resources = 0.1
+			}
+			
+			traits = { refinery_concern }
+		}
+		
+		industrial_concern = {
+			
+			research_bonus = {
+				industry = 0.10
+				
+			}
+			
+			traits = { industrial_concern }
+		}
+
+		electronics_concern = {
+			
+			research_bonus = {
+				electronics = 0.10
+			}
+			
+			traits = { electronics_concern }
+		}		
+	}
+	
+	materiel_manufacturer = {
+		
+		designer = yes
+		
+		artillery_manufacturer = {
+			
+			research_bonus = {
+				artillery = 0.10
+			}
+			
+			traits = { artillery_manufacturer }
+			
+			modifier = {
+				# +10% arty/at/aa research speed
+			}
+		}
+		
+		infantry_equipment_manufacturer = {
+			
+			research_bonus = {
+				infantry_weapons = 0.10
+			}
+			
+			traits = { infantry_equipment_manufacturer }
+		}
+		
+		
+
+		
+		motorized_equipment_manufacturer = {
+			
+			research_bonus = {
+				motorized_equipment = 0.10
+			}
+			
+			traits = { motorized_equipment_manufacturer }
+		}
+	}
+	
+	theorist = {
+		rocket_scientist = {
+			
+			research_bonus = {
+				rocketry = 0.10
+			}
+			
+			traits = { rocket_scientist }
+		}
+		
+		nuclear_scientist = {
+		
+			research_bonus = {
+				nuclear = 0.10
+			}
+			
+			traits = { nuclear_scientist }
+		}
+		
+		grand_battle_plan_expert = {
+		
+			cost = 250
+			
+			research_bonus = {
+				cat_grand_battle_plan = 0.10
+			}
+			
+			
+			traits = { grand_battle_plan_expert }
+		}
+		
+		mobile_warfare_expert = {
+			
+			cost = 250
+			
+			research_bonus = {
+				cat_mobile_warfare = 0.10
+			}
+			
+
+			traits = { mobile_warfare_expert }
+		}
+		
+		mass_assault_expert = {
+			
+			cost = 250
+			
+			research_bonus = {
+				cat_mass_assault = 0.10
+			}
+			
+
+			traits = { mass_assault_expert }
+		}
+		
+		superior_firepower_expert = {
+			
+			cost = 250
+			
+			research_bonus = {
+				cat_superior_firepower = 0.10
+			}
+			
+
+			traits = { superior_firepower_expert }
+		}
+		
+		close_air_support_proponent = {
+			
+			cost = 250
+			
+			research_bonus = {
+				cat_battlefield_support = 0.10
+			}
+			
+			traits = { close_air_support_proponent }
+		}
+		
+		air_warfare_theorist = {
+			
+			research_bonus = {
+				air_doctrine = 0.07
+			}
+			
+			traits = { air_warfare_theorist }
+		}
+		
+		dive_bomber = {
+			
+			research_bonus = {
+				air_doctrine = 0.07
+			}
+			
+			traits = { dive_bomber }
+		}
+		
+		submarine_specialist = {
+			
+			cost = 250
+			
+			research_bonus = {
+				cat_trade_interdiction = 0.20
+			}
+			
+			traits = { submarine_specialist }
+		}
+		
+		naval_theorist = {
+			
+			research_bonus = {
+				naval_doctrine = 0.07
+			}
+			
+			traits = { naval_theorist }
+		}
+	}	
+		
+	# MILITARY
+	army_chief = {
+
+		army_chief_organizational_2 = {
+			
+			traits = { army_chief_organizational_2 }			
+		}
+
+		army_chief_drill_2  = {
+						
+			traits = { army_chief_drill_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	
+		army_chief_offensive_2 = {
+						
+			traits = { army_chief_offensive_2 }
+		}
+	
+		army_chief_maneuver = {
+
+					
+			traits = { army_chief_maneuver_2 }
+		}
+	}
+	
+	air_chief = {
+		
+		air_chief_ground_support_2 = {
+						
+			traits = { air_chief_ground_support_2 }
+		}
+		
+		air_chief_all_weather_2 = {
+						
+			traits = { air_chief_all_weather_2 }
+		}
+		
+		air_chief_reform_2 = {
+						
+			traits = { air_chief_reform_2 }
+		}
+	}
+	
+	navy_chief = { #CHIEF OF NAVY
+		
+		navy_chief_decisive_battle_2 = {
+						
+			traits = { navy_chief_decisive_battle_2 }
+		}
+		
+		navy_chief_commerce_raiding_3 = {
+						
+			traits = { navy_chief_commerce_raiding_3 }
+		}
+	}
+
+	high_command = {
+
+		army_infantry_2 = {
+			
+			traits = { army_infantry_2 }
+		}
+		
+		tank_expert = {
+			
+			traits = { army_armored_3 }
+		}
+		
+		army_regrouping_2 = {
+
+			traits = { army_regrouping_2 }
+		}
+		
+		army_logistics_2 = {
+			
+			traits = { army_logistics_2 }
+		}
+		
+		air_close_air_support_2 = {
+			
+			traits = { air_close_air_support_2 }
+		}
+		
+		air_bomber_interception_2 = {
+			
+			traits = { air_bomber_interception_2 }
+		}
+		
+		air_airborne_2 = {
+			
+			traits = { air_airborne_2 }
+		}	
+		
+		navy_naval_air_defense_2 = {
+			
+			traits = { navy_naval_air_defense_2 }
+		}
+		
+		navy_fleet_logistics_2 = {
+			
+			traits = { navy_fleet_logistics_2 }
+		}
+		 
+		navy_anti_submarine_1 = {
+			
+			traits = { navy_anti_submarine_1 }
+		}
+	}
+
+}

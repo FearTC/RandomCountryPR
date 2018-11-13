@@ -1,0 +1,27 @@
+
+state={
+	id=534
+	name="STATE_534" # Hokuriku
+	manpower = 1
+	
+	state_category = wasteland
+
+	history={
+		owner = JAP
+		
+		buildings = {
+			infrastructure = 3
+			
+			
+		}
+		victory_points = { 1117 1}
+		
+		
+
+
+	}
+
+	provinces={
+		1117 9952 10128 11930 11989 12007 
+	}
+}

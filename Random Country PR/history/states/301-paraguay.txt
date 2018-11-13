@@ -1,0 +1,27 @@
+
+state={
+	id=301
+	name="STATE_301"
+	manpower = 1
+	
+	state_category = wasteland
+	
+	history={
+		owner = PAR
+		buildings = {
+			infrastructure = 3
+			
+			
+			
+		}
+		
+		victory_points = { 2152 1}
+		
+
+	}
+
+	provinces={
+		2152 2173 2194 11023 12901 
+	}
+	
+}

@@ -1,0 +1,27 @@
+
+state={
+	id=555
+	name="STATE_555" #Kuril Islands
+	manpower = 1
+	
+	state_category = wasteland
+
+	history={
+		owner = JAP
+		
+		victory_points = { 1399 1}
+		buildings = {
+			infrastructure = 3
+			1399 = {
+				naval_base = 3
+
+			}
+
+		}
+
+	}
+
+	provinces={
+		1399 1515 13037 
+	}
+}

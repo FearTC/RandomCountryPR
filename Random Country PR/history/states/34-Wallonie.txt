@@ -1,0 +1,27 @@
+
+state={
+	id=34
+	name="STATE_34"
+	manpower = 1
+	
+	state_category = wasteland
+
+	history={
+		owner = BEL
+		
+		
+		buildings = {
+			infrastructure = 3
+			
+			
+			
+
+		}
+		victory_points = { 3488 1}
+		
+	}
+
+	provinces={
+		3488 3516 6537 9418 9444 9536 11407 11519 13081 
+	}
+}

@@ -1,0 +1,22 @@
+
+state={
+	id=488
+	name="STATE_488"
+	manpower = 1
+	
+	state_category = wasteland
+
+	history={
+		owner = VEN
+		buildings = {
+			infrastructure = 3
+
+		}
+		
+		victory_points = { 1981 1}
+	}
+
+	provinces={
+		1981 5317 7915 8050 10736 10849 10879 
+	}
+}

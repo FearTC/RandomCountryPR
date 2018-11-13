@@ -1,0 +1,36 @@
+﻿add_namespace = md_news
+
+
+news_event = {
+	id = md_news.1
+	title = md_news.1.t
+	desc = md_news.1.desc
+	picture = GFX_news_event_generic_parliament
+
+	is_triggered_only = yes
+	
+	option = {
+		name = md_news.1.a
+		trigger = {
+			OR = {
+				original_tag = POR
+				original_tag = SPR
+			}
+			NOT = { has_war_with = FROM }
+		}
+	}
+	option = {
+		name = md_news.1.b
+		trigger = {
+			NOT = { original_tag = POR }
+			NOT = { original_tag = SPR }
+			NOT = { has_war_with = FROM }
+		}
+	}
+	option = {
+		name = md_news.1.c
+		trigger = {
+			has_war_with = FROM
+		}
+	}
+}

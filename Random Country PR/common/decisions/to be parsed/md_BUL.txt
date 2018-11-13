@@ -1,0 +1,65 @@
+special_projects = {
+
+	establish_derhavna_samoletna_fabrika = {
+
+		icon = generic_industry
+
+		available = {
+			POL = {
+				has_opinion = {
+					target = BUL
+					value > 74
+				}
+			}
+		}
+
+		visible = {
+			original_tag = BUL
+			country_exists = POL
+		}
+
+		remove_trigger = {
+			NOT = {
+				country_exists = POL
+			}
+        }
+		
+		fire_only_once = no
+
+		complete_effect = {
+			add_tech_bonus = {
+				name = fighter_focus
+				bonus = 0.5
+				uses = 1
+				technology = fighter1
+			}
+			POL = {
+				create_production_license = {
+					target = BUL
+					equipment = {
+						type = cas_equipment_1
+						}
+					cost_factor = 0
+				}
+			}	
+		}
+
+
+		days_remove = -1
+		days_re_enable = 100
+
+		cost = 100
+
+		complete_effect = {
+
+		}
+
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 1
+				has_stability < 0.6
+			}
+		}
+	}
+}

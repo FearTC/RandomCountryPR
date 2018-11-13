@@ -1,0 +1,28 @@
+﻿add_namespace = ira
+
+
+country_event = {
+	id = ira.1
+	title = ira.1.t
+	desc = ira.1.desc
+	picture = GFX_news_event_generic_parliament
+
+	is_triggered_only = yes
+	
+	option = {
+		name = ira.1.a
+	}
+}
+
+country_event = {
+	id = ira.2
+	title = ira.2.t
+	desc = ira.2.desc
+	picture = GFX_news_event_generic_parliament
+
+	is_triggered_only = yes
+	
+	option = {
+		name = ira.2.a
+	}
+}

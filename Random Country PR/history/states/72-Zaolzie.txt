@@ -1,0 +1,22 @@
+state={
+	id=72
+	name="STATE_72"
+	manpower = 1
+	
+	state_category = wasteland
+	
+	history={
+		owner = CZE
+		buildings = {
+			infrastructure = 3
+			
+		}
+		
+
+		victory_points = { 9551 1}
+	}
+
+	provinces={
+		9551 9567 
+	}
+}

@@ -1,0 +1,26 @@
+
+state={
+	id=106
+	name="STATE_106"
+	manpower = 1
+	
+	state_category = wasteland
+	
+	
+
+	history={
+		owner = YUG
+		buildings = {
+			infrastructure = 3
+			
+			
+		}
+		
+		
+		victory_points = { 907 1}
+	}
+
+	provinces={
+		907 974 3833 3865 3882 6886 11832 11856 11857 11868 
+	}
+}

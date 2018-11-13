@@ -1,0 +1,145 @@
+operations = {
+
+	war_plan_green = {
+
+		icon = generic_operation
+	
+		allowed = {
+			tag = USA
+		}
+		
+		available = {
+			tag = USA
+		}
+
+		cost = 50
+
+		ai_will_do = {
+			factor = 1
+		}
+		
+		visible = {
+			tag = USA
+			MEX = {
+				has_government = fascism
+				exists = yes
+			}
+			NOT = { HUN = { is_in_faction_with = ROOT } }
+		}
+		
+		complete_effect = {
+			declare_war_on = { target = MEX type = topple_government }
+		}
+	}
+	
+	war_plan_gold = {
+
+		icon = generic_operation
+	
+		allowed = {
+			tag = USA
+		}
+		
+		available = {
+			tag = USA
+		}
+
+		cost = 50
+
+		ai_will_do = {
+			factor = 1
+		}
+		
+		visible = {
+			tag = USA
+			FRA = {
+				OR = {
+					has_government = fascism
+					has_government = communism
+				}
+				exists = yes
+			}
+			NOT = { FRA = { is_in_faction_with = ROOT } }
+		}
+		
+		complete_effect = {
+			declare_war_on = { target = FRA type = topple_government }
+		}
+	}
+	
+	war_plan_indigo = {
+
+		icon = generic_operation
+	
+		allowed = {
+			tag = USA
+		}
+		
+		available = {
+			tag = USA
+		}
+
+		cost = 50
+
+		ai_will_do = {
+			factor = 1
+		}
+		
+		visible = {
+			tag = USA
+			ICE = {
+				OR = {
+					has_government = fascism
+					has_government = communism
+				}
+				exists = yes
+			}
+			NOT = { ICE = { is_in_faction_with = ROOT } }
+		}
+		
+		complete_effect = {
+			declare_war_on = { target = ICE type = topple_government }
+		}
+	}
+}
+
+political_actions = {
+
+	hold_infamy_speech = {
+
+		icon = generic_political_discourse
+
+		allowed = {
+			tag = USA
+		}
+
+		available = {
+			has_government = democratic
+			has_country_leader = { ruling_only = yes name = "Franklin Delano Roosevelt" }
+		}
+
+		cost = 50
+
+		fire_only_once = yes
+
+		visible = {
+			tag = USA
+			has_government = democratic
+			USA = {
+				has_completed_focus = USA_pearl_harbor_gambit
+			}
+			NOT = {
+				has_war_with = JAP
+			}
+			has_country_leader = { ruling_only = yes name = "Franklin Delano Roosevelt" }
+		}
+
+		complete_effect = {
+			add_stability = 0.05
+			add_war_support = 0.05
+		}
+
+		ai_will_do = {
+			factor = 100 #Gotta allow the Americans to help
+		}
+	}

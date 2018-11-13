@@ -1,0 +1,28 @@
+
+state={
+	id=105
+	name="STATE_105" # Montenegro
+	manpower = 1
+	
+	state_category = wasteland
+	
+	
+
+	history={
+		owner = YUG
+		
+		buildings = {
+			infrastructure = 3
+			
+			9809 = {
+				naval_base = 1
+			}
+		}
+		
+		victory_points = { 833 1}
+	}
+
+	provinces={
+		833 867 937 3922 6913 6940 9809 9821 9849 9874 11858 
+	}
+}

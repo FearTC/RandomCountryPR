@@ -1,0 +1,30 @@
+
+state={
+	id=535
+	name="STATE_535" # Koshinetsu
+	manpower = 1
+	state_category = wasteland
+	
+	
+
+	history={
+		owner = JAP
+		
+		buildings = {
+		
+			
+			
+			infrastructure = 3
+			
+
+		}
+		victory_points = { 998 1}
+		
+		
+
+	}
+
+	provinces={
+		998 7102 7217 10015 10032 
+	}
+}

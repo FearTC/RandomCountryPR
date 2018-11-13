@@ -1,0 +1,22 @@
+
+state={
+	id=612
+	name="STATE_612" # Chahar
+	manpower = 1
+	
+	state_category = wasteland
+
+	history={
+		owner = MEN
+		
+
+		buildings = {
+			infrastructure = 3
+		}
+		victory_points = { 1551 1}
+	}
+
+	provinces={
+		1551 1608 1796 1811 1871 4222 4555 4655 7578 7648 10363 10372 12348 12448 12554 
+	}
+}

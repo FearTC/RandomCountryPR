@@ -1,0 +1,470 @@
+﻿#######################
+# War Creation Events #
+#######################
+# Scripted by Mechano
+#
+# These events exist for AI reasons, AI with claims will actually justify war and create conflict.
+add_namespace = war_creation
+country_event = {
+	id = war_creation.1
+	title = war_creation.1.t
+	desc = war_creation.1.d
+	picture = report_event_korean_war_march
+	hidden = yes
+	fire_only_once = no
+	trigger = {
+		elgible_wargoal_sender = yes
+	}
+	option = {
+		name = war_creation.1.a
+		random_neighbor_country = {
+			limit = {
+					elgible_wargoal_receiver = yes
+			}
+			country_event = {days = 1 id = war_creation.2}
+		}
+	}
+	mean_time_to_happen = {
+		days = 8500 # 8500
+		modifier = {
+			factor = 0.6
+			has_government = communist
+		}
+		modifier = {
+			factor = 2.0
+			is_major = yes
+		}
+		modifier = {
+			factor = 1.0
+			has_government = communism
+		}
+		modifier = {
+			factor = 2.0
+			has_government = democratic
+		}
+		modifier = {
+			factor = 1.6
+			has_government = neutrality
+		}
+		modifier = {
+			factor = 0.6
+			has_government = fascist
+		}
+		modifier = {
+			factor = 0.5
+			threat > 1.0
+		}
+		modifier = {
+			factor = 0.5
+			threat > 0.9
+		}
+		modifier = {
+			factor = 0.6
+			threat > 0.75
+		}
+		modifier = {
+			factor = 0.75
+			threat > 0.6
+		}
+		modifier = {
+			factor = 0.75
+			threat > 0.4
+		}
+		modifier = {
+			factor = 0.75
+			threat > 0.35
+		}
+		modifier = {
+			factor = 0.75
+			threat > 0.25
+		}
+		modifier = {
+			factor = 0.75
+			threat > 0.15
+		}
+		modifier = {
+			factor = 2.0
+			has_global_flag = halfwar
+		}
+		modifier = {
+			factor = 0.5
+			has_global_flag = doublewar
+		}
+		modifier = {
+			factor = 0.25
+			has_global_flag = quadruplewar
+		}
+	}
+}
+
+country_event = {
+	id = war_creation.2
+	title = war_creation.2.t
+	desc = war_creation.2.d
+	picture = GFX_report_event_korean_war_march
+	is_triggered_only = yes
+	option = {
+		name = war_creation.2.a
+		custom_effect_tooltip = war_creation.2.a.tt
+		FROM = { country_event = { id = war_creation.3 }}
+	}
+}
+
+country_event = {
+	id = war_creation.3
+	title = war_creation.3.t
+	desc = war_creation.3.d
+	picture = GFX_report_event_korean_war_march
+	is_triggered_only = yes
+	option = {
+		name = war_creation.3.a
+		FROM = {
+			random_owned_state = {
+				limit = {
+					any_neighbor_state = {
+						is_owned_by = ROOT
+					}
+				}
+				add_claim_by = ROOT
+			}
+		}
+	}
+}
+
+# intro menu
+country_event = {
+	id = war_creation.4
+	title = war_creation.4.t
+	desc = war_creation.4.d
+	picture = GFX_report_event_soldiers_marching
+	is_triggered_only = yes
+	option = {
+		name = war_creation.4.a
+	}
+	option = {
+		name = war_creation.4.b
+		country_event = war_creation.5
+		trigger = {
+			is_ai = no
+		}
+	}
+}
+# Main settings menu
+country_event = {
+	id = war_creation.5
+	title = war_creation.5.t
+	desc = war_creation.5.d
+	picture = GFX_report_event_yugoslavia_partisans
+	is_triggered_only = yes
+	immediate = {
+		hidden_effect = { remove_ideas = millennium_chaos_settings_idea }
+	}
+	option = {
+		name = war_creation.5.a
+		custom_effect_tooltip = war_creation.5.a.tt
+	}
+	option = {
+		name = war_creation.5.b
+		country_event = war_creation.7
+		custom_effect_tooltip = war_creation.5.b.tt
+	}
+	option = {
+		name = war_creation.5.c
+		country_event = war_creation.9
+		custom_effect_tooltip = war_creation.5.c.tt
+	}
+	option = {
+		name = war_creation.5.dd
+		country_event = war_creation.6
+		custom_effect_tooltip = war_creation.5.d.tt
+	}	
+}
+# War Frequency Settings
+country_event = {
+	id = war_creation.6
+	title = war_creation.6.t
+	desc = war_creation.6.dd
+	picture = GFX_report_event_german_troops_paris
+	is_triggered_only = yes
+	option = {
+		name = war_creation.6.a
+		country_event = war_creation.5
+		set_global_flag = halfwar
+		clr_global_flag = doublewar
+		clr_global_flag = quadruplewar
+		custom_effect_tooltip = war_creation.6.a.tt
+	}
+	
+	option = {
+		name = war_creation.6.b
+		country_event = war_creation.5
+		clr_global_flag = halfwar
+		clr_global_flag = doublewar
+		clr_global_flag = quadruplewar
+		custom_effect_tooltip = war_creation.6.b.tt
+	}
+	
+	option = {
+		name = war_creation.6.c
+		country_event = war_creation.5
+		set_global_flag = doublewar
+		clr_global_flag = halfwar
+		clr_global_flag = quadruplewar
+		custom_effect_tooltip = war_creation.6.c.tt
+	}
+	
+	option = {
+		name = war_creation.6.d
+		country_event = war_creation.5
+		clr_global_flag = doublewar
+		set_global_flag = quadruplewar
+		clr_global_flag = halfwar
+		custom_effect_tooltip = war_creation.6.d.tt
+	}
+}
+
+# Faction Settings
+country_event = {
+	id = war_creation.7
+	title = war_creation.7.t
+	desc = war_creation.7.dd
+	picture = GFX_report_event_spain_civil_war_volunteers_02
+	is_triggered_only = yes
+	option = {
+		name = war_creation.7.a
+		country_event = war_creation.5
+		custom_effect_tooltip = war_creation.7.a.tt
+	}
+	
+	option = {
+		name = war_creation.7.b
+		country_event = { hours = 1 id = war_creation.7 }
+		every_country = {
+			dismantle_faction = yes
+		}
+		custom_effect_tooltip = war_creation.7.b.tt
+	}
+	
+	option = {
+		name = war_creation.7.c
+		country_event = { hours = 1 id = war_creation.7 }
+		every_country = {
+			set_rule = { can_create_factions = no }
+		}
+		custom_effect_tooltip = war_creation.7.c.tt
+	}
+	
+	option = {
+		name = war_creation.7.d
+		country_event = war_creation.8
+		custom_effect_tooltip = war_creation.7.d.tt
+	}
+}
+
+# Faction enter war creation system settings
+country_event = {
+	id = war_creation.8
+	title = war_creation.8.t
+	desc = war_creation.8.dd
+	picture = GFX_report_event_second_vienna_award_pact
+	is_triggered_only = yes
+	option = {
+		name = war_creation.8.a
+		country_event = war_creation.7
+		set_global_flag = faction_min_claim_temp_0
+		clr_global_flag = faction_min_claim_temp_30
+		clr_global_flag = faction_min_claim_temp_60
+		custom_effect_tooltip = war_creation.8.a.tt
+	}
+	
+	option = {
+		name = war_creation.8.b
+		country_event = war_creation.7
+		clr_global_flag = faction_min_claim_temp_0
+		set_global_flag = faction_min_claim_temp_30
+		clr_global_flag = faction_min_claim_temp_60
+		custom_effect_tooltip = war_creation.8.b.tt
+	}
+	
+	option = {
+		name = war_creation.8.c
+		country_event = war_creation.7
+		clr_global_flag = faction_min_claim_temp_0
+		clr_global_flag = faction_min_claim_temp_30
+		set_global_flag = faction_min_claim_temp_60
+		custom_effect_tooltip = war_creation.8.c.tt
+	}
+	
+	option = { # default
+		name = war_creation.8.d
+		country_event = war_creation.7
+		clr_global_flag = faction_min_claim_temp_0
+		clr_global_flag = faction_min_claim_temp_30
+		clr_global_flag = faction_min_claim_temp_60
+		custom_effect_tooltip = war_creation.8.d.tt
+	}
+}
+
+# Misc settings menu
+country_event = {
+	id = war_creation.9
+	title = war_creation.9.t
+	desc = war_creation.9.dd
+	picture = GFX_report_event_romanian_soldiers
+	is_triggered_only = yes
+	option = {
+		name = war_creation.9.a
+		country_event = war_creation.5
+		custom_effect_tooltip = war_creation.9.a.tt
+	}
+	
+	option = {
+		name = war_creation.9.b
+		country_event = { hours = 1 id = war_creation.9 }
+		every_country = {
+			every_state = {
+				remove_claim_by = PREV
+			}
+		}
+		custom_effect_tooltip = war_creation.9.b.tt
+	}
+	
+	option = {
+		name = war_creation.9.c.1
+		set_global_flag = remove_democratic_protections
+		country_event = { hours = 1 id = war_creation.9 }
+			custom_effect_tooltip = war_creation.9.c.tt
+		trigger = {
+			NOT = {
+				has_global_flag = remove_democratic_protections
+			}
+		}
+	}
+	option = {
+		name = war_creation.9.c.2
+		clr_global_flag = remove_democratic_protections
+		country_event = { hours = 1 id = war_creation.9 }
+		custom_effect_tooltip = war_creation.9.c.tt
+		trigger = {
+			has_global_flag = remove_democratic_protections
+		}
+	}
+	
+	option = {
+		name = war_creation.9.d
+		country_event = war_creation.10
+		custom_effect_tooltip = war_creation.9.d.tt
+	}
+}
+
+# Cheat settings menu
+country_event = {
+	id = war_creation.10
+	title = war_creation.10.t
+	desc = war_creation.10.dd
+	picture = GFX_report_event_finnish_soldiers_snow
+	is_triggered_only = yes
+	option = {
+		name = war_creation.10.a
+		country_event = war_creation.9
+		custom_effect_tooltip = war_creation.10.a.tt
+	}
+	
+	option = {
+		name = war_creation.10.b
+		country_event = { hours = 1 id = war_creation.10 }
+		every_country = {
+			add_threat = 100
+		}
+		custom_effect_tooltip = war_creation.10.b.tt
+	}
+	
+	option = {
+		name = war_creation.10.c
+		every_country = {
+				add_equipment_to_stockpile = { type = infantry_equipment_0 amount = 500000 }
+				add_equipment_to_stockpile = { type = artillery_equipment_1 amount = 100000 }
+				add_equipment_to_stockpile = { type = anti_tank_equipment_1 amount = 100000 }
+				add_equipment_to_stockpile = { type = anti_air_equipment_1 amount = 100000 }
+				add_equipment_to_stockpile = { type = motorized_equipment_1 amount = 100000 }
+				add_equipment_to_stockpile = { type = support_equipment_1 amount = 100000 }
+				add_equipment_to_stockpile = { type = heavy_tank_equipment_1 amount = 100000 }
+				add_equipment_to_stockpile = { type = light_tank_equipment_1 amount = 100000 }
+				add_equipment_to_stockpile = { type = modern_tank_equipment_1 amount = 100000 }
+				add_equipment_to_stockpile = { type = destroyer_1  amount = 10000 }
+				add_equipment_to_stockpile = { type = convoy_1  amount = 10000 }
+				add_equipment_to_stockpile = { type = tac_bomber_equipment_1 amount = 100000 }
+				add_equipment_to_stockpile = { type = fighter_equipment_1 amount = 100000 }
+		}
+		country_event = { hours = 1 id = war_creation.10 }
+		custom_effect_tooltip = war_creation.10.c.tt
+	}
+	
+	option = {
+		name = war_creation.10.d
+		country_event = { hours = 1 id = war_creation.10 }
+			every_country = {
+				kill_country_leader = yes
+				create_country_leader = {
+					name = "Rod Hull"
+					picture = "gfx/leaders/AST/Portrait_Australia_Rod_Hull.dds"
+					ideology = conservatism
+				}
+				create_country_leader = {
+					name = "Commie Hull"
+					picture = "gfx/leaders/AST/Portrait_Australia_Rod_Hull.dds"
+					ideology = stalinism  
+				}
+				create_country_leader = {
+					name = "Nazi Emu Purging Hull"
+					picture = "gfx/leaders/AST/Portrait_Australia_Rod_Hull.dds"
+					ideology = nazism
+				}
+				create_country_leader = {
+					name = "King Hull of the Emu"
+					picture = "gfx/leaders/AST/Portrait_Australia_Rod_Hull.dds"
+					ideology = despotism
+			}
+		}
+		custom_effect_tooltip = war_creation.10.d.tt
+	}
+}
+country_event = {
+	id = war_creation.11
+	title = war_creation.11.t
+	desc = war_creation.11.dd
+	hidden = yes
+	picture = GFX_report_event_finnish_soldiers_snow
+	is_triggered_only = yes
+	immediate = {
+		if = {
+			add_ideas = millennium_chaos_no_viable_neighbours 
+			limit = {
+				is_island_nation = yes
+			}
+		}
+		if = {
+			remove_ideas = millennium_chaos_no_viable_neighbours 
+			limit = {
+				is_island_nation = no
+			}
+		}
+	}
+	option = {
+		name = war_creation.11.a
+	}
+}
+country_event = {
+	id = war_creation.12
+	title = war_creation.12.t
+	desc = war_creation.12.dd
+	hidden = yes
+	picture = GFX_report_event_finnish_soldiers_snow
+	is_triggered_only = yes
+	immediate = {
+		FROM = { create_wargoal = { type = take_claimed_state target = PREV } }
+	}
+	option = {
+		name = war_creation.12.a
+	}
+}

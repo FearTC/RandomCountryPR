@@ -1,0 +1,30 @@
+
+state={
+	id=125
+	name="STATE_125"
+	manpower = 1
+	
+	state_category = wasteland
+
+	history={
+		owner = ENG
+		
+		buildings = {
+			infrastructure = 3
+			
+			
+			
+			
+			
+			271 = {
+				naval_base = 3
+			}
+		}
+		
+		victory_points = { 221 1}
+	}
+
+	provinces={
+		221 271 296 322 3287 11221 11253 
+	}
+}

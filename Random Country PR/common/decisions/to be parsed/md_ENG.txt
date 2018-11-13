@@ -1,0 +1,50 @@
+war_measures = {
+
+	victory_gardens = {
+
+		icon = generic_civil_support
+
+		available = {
+		}
+
+		visible = {
+			OR = {
+				original_tag = ENG
+				original_tag = CAN
+				original_tag = AST
+				original_tag = USA
+				original_tag = GER
+			}
+		}
+
+		remove_trigger = {
+            has_war = no
+        }
+		
+		fire_only_once = no
+
+		modifier = {
+			consumer_goods_factor = 0.08
+			war_support_weekly = 0.005
+			stability_weekly = 0.005
+		}
+
+
+		days_remove = 90
+		days_re_enable = 100
+
+		cost = 100
+
+		complete_effect = {
+
+		}
+
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 1
+				has_stability < 0.6
+			}
+		}
+	}
+}

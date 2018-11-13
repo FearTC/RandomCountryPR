@@ -1,0 +1,13 @@
+integration = {
+	icon = generic_propaganda
+	
+	visible = {
+	}
+}
+
+coring = {
+	icon = generic_propaganda
+	
+	visible = {
+	}
+}

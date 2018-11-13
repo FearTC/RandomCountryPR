@@ -1,0 +1,27 @@
+
+state={
+	id=166
+	name="STATE_166"
+	manpower = 1
+	
+	
+	state_category = wasteland
+	
+	
+
+	history={
+		owner = SPR
+		
+		buildings = {
+			infrastructure = 3
+			
+			
+		}
+		
+		victory_points = { 790 1}
+	}
+
+	provinces={
+		790 798 813 871 899 915 948 3816 3909 3954 6878 6901 7213 9812 9813 9840 9842 11737 11793 11819 11821 11838 
+	}
+}

@@ -1,0 +1,24 @@
+state=
+{
+	id=648
+	name="STATE_648"
+	state_category = wasteland
+	manpower = 1
+	history=
+	{
+		owner = JAP
+		
+		buildings = {
+			infrastructure = 3
+			
+			13026 = {
+				naval_base = 1
+			}
+		}
+		victory_points = { 13026 1}
+
+	}
+	provinces=
+	{
+13026 	}
+}

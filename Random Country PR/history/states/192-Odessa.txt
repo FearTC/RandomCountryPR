@@ -1,0 +1,29 @@
+
+state={
+	id=192
+	name="STATE_192"
+	manpower = 1
+	
+	state_category = wasteland
+
+	history={
+		owner = SOV
+		
+		buildings = {
+			infrastructure = 3
+			
+			
+			11670 ={
+				naval_base = 3
+				coastal_bunker = 0
+			}
+		}
+		
+		
+		victory_points = { 741 1}
+	}
+
+	provinces={
+		741 754 3575 3738 3757 9698 9714 11670 11703 
+	}
+}

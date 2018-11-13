@@ -1,0 +1,26 @@
+
+state={
+	id=20
+	name="STATE_20" # Rhone
+	manpower = 1
+	
+
+	state_category = wasteland
+
+	history={
+		owner = FRA
+		
+		buildings = {
+			infrastructure = 3
+			
+			
+			
+		}
+		
+		victory_points = { 641 1}
+	}
+
+	provinces={
+		641 3650 3770 6613 6639 6668 6786 9590 9728 9732 11593 11716 11794 
+	}
+}

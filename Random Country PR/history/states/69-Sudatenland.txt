@@ -1,0 +1,51 @@
+state=
+{
+	id=69
+	name="STATE_69"
+	manpower = 1
+	
+	state_category = wasteland
+	
+	history={
+		owner = CZE
+		buildings = {
+			infrastructure = 3
+			
+			424 =
+			{
+				bunker = 0
+			}
+			469 =
+			{
+				bunker = 0
+			}
+			3585 =
+			{
+				bunker = 0
+			}
+			5283 =
+			{
+				bunker = 0
+			}
+			6470 =
+			{
+				bunker = 0
+			}
+			9555 =
+			{
+				bunker = 0
+			}
+			11432 =
+			{
+				bunker = 0
+			}
+
+		}
+		
+
+		victory_points = { 424 1}
+	}
+	provinces=
+	{
+424 469 543 557 3418 3585 5283 6470 7857 9555 11401 11414 11432 11525 	}
+}

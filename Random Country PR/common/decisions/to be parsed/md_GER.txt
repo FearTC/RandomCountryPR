@@ -1,0 +1,173 @@
+operations = {
+
+	operation_margarethe = {
+
+		icon = generic_operation
+	
+		allowed = {
+			tag = GER
+		}
+		
+		available = {
+			tag = GER
+			has_government = fascism
+			has_war_with = SOV
+			HUN = { exists = yes }
+		}
+
+		cost = 50
+
+		ai_will_do = {
+			factor = 1
+		}
+		
+		visible = {
+			tag = GER
+			has_war_with = SOV
+			HUN = { exists = yes }
+			NOT = { HUN = { is_in_faction_with = ROOT } }
+		}
+		
+		complete_effect = {
+			declare_war_on = { target = HUN type = puppet_wargoal_focus }
+		}
+	}
+	
+	operation_margarethe_ii = {
+
+		icon = generic_operation
+	
+		allowed = {
+			tag = GER
+		}
+		
+		available = {
+			tag = GER
+			has_government = fascism
+			has_war_with = SOV
+			ROM = { exists = yes }
+		}
+
+		cost = 50
+
+		ai_will_do = {
+			factor = 1
+		}
+		
+		visible = {
+			tag = GER
+			has_war_with = SOV
+			ROM = { exists = yes }
+			NOT = { ROM = { is_in_faction_with = ROOT } }
+		}
+		
+		complete_effect = {
+			declare_war_on = { target = ROM type = puppet_wargoal_focus }
+		}
+	}
+	
+	operation_ikarus = {
+
+		icon = generic_operation
+	
+		allowed = {
+			tag = GER
+		}
+		
+		available = {
+			tag = GER
+			has_government = fascism
+			has_war_with = ENG
+			ICE = { exists = yes }
+		}
+
+		cost = 50
+
+		ai_will_do = {
+			factor = 1
+		}
+		
+		visible = {
+			tag = GER
+			has_war_with = ENG
+			ICE = { exists = yes }
+			NOT = { ICE = { is_in_faction_with = ROOT } }
+		}
+		
+		complete_effect = {
+			declare_war_on = { target = ICE type = puppet_wargoal_focus }
+		}
+	}
+	
+	operation_renntier = {
+
+		icon = generic_operation
+	
+		allowed = {
+			tag = GER
+		}
+		
+		available = {
+			tag = GER
+			has_government = fascism
+			has_war_with = SOV
+			FIN = { exists = yes }
+		}
+
+		cost = 50
+
+		ai_will_do = {
+			factor = 1
+		}
+		
+		visible = {
+			tag = GER
+			has_war_with = SOV
+			FIN = { exists = yes }
+			NOT = { FIN = { is_in_faction_with = ROOT } }
+		}
+		
+		complete_effect = {
+			declare_war_on = { target = FIN type = puppet_wargoal_focus }
+		}
+	}
+}
+
+political_actions = {
+
+	hold_total_war_speech = {
+
+		icon = generic_political_discourse
+
+		allowed = {
+			tag = GER
+		}
+
+		available = {
+			has_government = fascism
+			has_country_leader = { ruling_only = yes name = "Adolf Hitler" }
+			has_war_with = SOV
+			has_war_with = ENG
+		}
+
+		cost = 50
+
+		fire_only_once = yes
+
+		visible = {
+			tag = GER
+			has_government = fascism
+			has_war_with = SOV
+			has_war_with = ENG
+			has_country_leader = { ruling_only = yes name = "Adolf Hitler" }
+		}
+
+		complete_effect = {
+			add_stability = 0.05
+			add_war_support = 0.05
+		}
+
+		ai_will_do = {
+			factor = 50
+		}
+	}

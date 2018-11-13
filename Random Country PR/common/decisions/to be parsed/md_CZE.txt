@@ -1,0 +1,53 @@
+economy_decisions = {
+
+	foreign_arms_exports = {
+
+		icon = generic_industry
+
+		available = {
+			has_war_support > 0.25
+			threat > 0.25
+		}
+
+		visible = {
+			OR = {
+				original_tag = CZE
+				original_tag = SWE
+			}
+			has_war_support > 0.25
+			threat > 0.25
+		}
+
+		remove_trigger = {
+			threat < 0.25
+			has_war_support < 0.25
+        }
+		
+		fire_only_once = no
+
+		modifier = {
+			industrial_capacity_factory = -0.01
+			consumer_goods_factor = -0.05
+			war_support_weekly = 0.005
+			lend_lease_tension = -0.25
+		}
+
+
+		days_remove = -1
+		days_re_enable = 100
+
+		cost = 100
+
+		complete_effect = {
+
+		}
+
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 1
+				has_stability < 0.6
+			}
+		}
+	}
+}

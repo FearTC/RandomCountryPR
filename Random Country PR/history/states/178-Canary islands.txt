@@ -1,0 +1,24 @@
+
+state={
+	id=178
+	name="STATE_178"
+	manpower = 1
+	
+	state_category = wasteland
+
+	history={
+		owner = SPR
+		buildings = {
+			infrastructure = 3
+			13071 = {
+				naval_base = 1
+			}
+		}
+		
+		victory_points = {13071 1}
+	}
+
+	provinces={
+		13071 
+	}
+}

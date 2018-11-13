@@ -1,0 +1,30 @@
+
+state={
+	id=62
+	name="STATE_62"
+	manpower = 1
+	
+	
+	state_category = wasteland
+
+	history={
+		owner = GER
+		
+		buildings = {
+			infrastructure = 3
+			
+			6282 = {
+				naval_base = 4
+
+			}
+			
+		}
+		
+
+		victory_points = { 349 1}
+	}
+
+	provinces={
+		349 3207 3312 3340 6282 6309 6334 6390 9334 9388 
+	}
+}

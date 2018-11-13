@@ -1,0 +1,124 @@
+####################state scope
+is_integration_ready = {
+	AND = {
+		is_controlled_by = ROOT
+		NOT = { is_core_of = ROOT }
+		if = {
+			LIMIT = { 
+				NOT = { is_owned_by = ROOT }
+			}
+			all_neighbor_state = {
+				is_controlled_by = ROOT
+			}
+		}
+		OR = {
+			any_neighbor_state = {
+				OR = {
+					is_core_of = ROOT
+					has_state_flag = integrated_by_@ROOT
+				}
+			}
+			AND = {
+				is_coastal = yes
+				ROOT = {
+					any_owned_state = {
+						AND = {
+							is_core_of = ROOT
+							is_coastal = yes
+						}
+					}
+				}
+			}
+		}
+		AND = {
+			NOT = { has_state_flag = integrated_by_@ROOT }
+			NOT = { has_state_flag = fast_integration_@ROOT }
+			NOT = { has_state_flag = normal_integration_@ROOT }
+			NOT = { has_state_flag = slow_integration_@ROOT }
+		}
+	}
+}
+
+####################state scope
+finished_integration = {
+	any_state = {
+		AND = {
+			is_controlled_by = FROM
+			OR = {
+				has_state_flag = {
+					flag = fast_integration_@FROM
+					days >50
+				}
+				has_state_flag = {
+					flag = normal_integration_@FROM
+					days >110
+				}
+				has_state_flag = {
+					flag = slow_integration_@FROM
+					days >230
+				}
+			}
+		}
+	}
+}
+
+####################state scope
+is_coring_ready = {
+	AND = {
+		is_owned_by = FROM
+		NOT = { is_core_of = FROM }
+		has_state_flag = integrated_by_@FROM
+		OR = {
+			any_neighbor_state = {
+				AND = {
+					is_core_of = FROM
+					is_owned_by = FROM
+				}
+			}
+			AND = {
+				is_coastal = yes
+				FROM = {
+					any_owned_state = {
+						AND = {
+							is_core_of = FROM
+							is_coastal = yes
+						}
+					}
+				}
+				all_neighbor_state = {
+					has_state_flag = integrated_by_@FROM
+					is_owned_by = FROM
+				}
+			}
+		}
+		NOT = {
+			OR = {
+				has_state_flag = fast_coring_@FROM
+				has_state_flag = normal_coring_@FROM
+				has_state_flag = slow_coring_@FROM
+				has_state_flag = never_core_@FROM
+			}
+		}
+	}
+}
+
+####################state scope
+finished_coring = {
+	AND = {
+		is_owned_by = FROM
+		OR = {
+			has_state_flag = {
+				flag = fast_coring_@FROM
+				days >80
+			}
+			has_state_flag = {
+				flag = normal_coring_@FROM
+				days >170
+			}
+			has_state_flag = {
+				flag = slow_coring_@FROM
+				days >350
+			}
+		}
+	}
+}

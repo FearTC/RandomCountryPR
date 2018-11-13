@@ -1,0 +1,31 @@
+
+state={
+	id=316
+	name="STATE_316"
+	manpower = 1
+	
+	
+	state_category = wasteland
+	
+
+	history={
+		owner = COS
+		buildings = {
+			infrastructure = 3
+			
+			
+			
+			13087 = {
+				naval_base = 1
+			}
+		}
+		
+		victory_points = { 12878 1}
+		
+
+	}
+
+	provinces={
+		12878 13087 13092 
+	}
+}

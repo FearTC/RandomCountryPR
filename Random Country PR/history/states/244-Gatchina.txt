@@ -1,0 +1,21 @@
+
+state={
+	id=244
+	name="STATE_244" # Volkhov
+	manpower = 1
+	
+	state_category = wasteland
+
+	history={
+		owner = SOV
+		buildings = {
+			infrastructure = 3
+		}
+		
+		victory_points = { 70 1}
+	}
+
+	provinces={
+		70 3072 3110 6035 6095 9164 9197 11174 
+	}
+}

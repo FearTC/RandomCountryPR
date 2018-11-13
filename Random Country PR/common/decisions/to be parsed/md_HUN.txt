@@ -1,0 +1,120 @@
+special_projects = {
+
+	construct_arpad_line = {
+
+		icon = generic_construction
+
+		allowed = {
+			original_tag = HUN
+		}
+
+		available = {
+			controls_state = 73
+			controls_state = 76
+			command_power > 50
+		}
+
+		cost = 120
+		days_remove = 200
+		
+		fire_only_once = yes
+		
+
+		ai_will_do = {
+			factor = 200
+		}
+
+		visible = {
+			original_tag = HUN
+			controls_state = 73
+			controls_state = 76
+		}
+
+		modifier = {
+			war_support_weekly = -0.001
+			command_power_gain = -0.05
+		}
+		
+		complete_effect = {
+			custom_effect_tooltip = construct_arpad_line_tt
+			hidden_effect = {
+				73 = {
+					add_building_construction = {
+						type = bunker
+						level = 3
+						province = 11536
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						level = 3
+						province = 9563
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						level = 3
+						province = 6571
+						instant_build = yes
+					}
+				}
+				76 = {
+					add_building_construction = {
+						type = bunker
+						level = 3
+						province = 9704
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						level = 3
+						province = 727
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						level = 3
+						province = 9685
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						level = 3
+						province = 711
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						level = 3
+						province = 3689
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						level = 3
+						province = 9668
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						level = 3
+						province = 9670
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						level = 3
+						province = 9672
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						level = 3
+						province = 11676
+						instant_build = yes
+					}
+				}
+			}
+		}
+	}
+}

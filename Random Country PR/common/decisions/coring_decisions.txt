@@ -1,0 +1,271 @@
+integration = {
+	start_integration = {
+		
+		icon = generic_propaganda
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		visible = {
+			any_state = {
+				AND = {
+					is_controlled_by = ROOT
+					NOT = { is_core_of = ROOT }
+					NOT = { has_state_flag = integrated_by_@FROM }
+				}
+			}
+		}
+		
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = integration_ready_requirements
+				any_state = {
+					AND = {
+						is_controlled_by = ROOT
+						NOT = { is_core_of = ROOT }
+						if = {
+							LIMIT = { 
+								NOT = { is_owned_by = ROOT }
+							}
+							all_neighbor_state = {
+								is_controlled_by = ROOT
+							}
+						}
+						OR = {
+							any_neighbor_state = {
+								OR = {
+									is_core_of = ROOT
+									has_state_flag = integrated_by_@FROM
+								}
+							}
+							AND = {
+								is_coastal = yes
+								ROOT = {
+									any_owned_state = {
+										AND = {
+											is_core_of = ROOT
+											is_coastal = yes
+										}
+									}
+								}
+							}
+						}
+						AND = {
+							NOT = { has_state_flag = integrated_by_@FROM }
+							NOT = { has_state_flag = fast_integration_@FROM }
+							NOT = { has_state_flag = normal_integration_@FROM }
+							NOT = { has_state_flag = slow_integration_@FROM }
+						}
+					}
+				}
+			}
+		}
+		
+		complete_effect = {
+			country_event = { id = cor_sta.1 hours = 0 }
+		}
+	}
+	
+	finish_integration = {
+		icon = generic_propaganda
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		visible = {
+			any_state = {
+				AND = {
+					is_controlled_by = ROOT
+					NOT = { is_core_of = ROOT }
+					NOT = { has_state_flag = integrated_by_@FROM }
+					OR = {
+						has_state_flag = fast_integration_@FROM
+						has_state_flag = normal_integration_@FROM
+						has_state_flag = slow_integration_@FROM
+					}
+				}
+			}
+		}
+		
+		available = {
+			any_state = {
+				AND = {
+					is_controlled_by = FROM
+					OR = {
+						has_state_flag = {
+							flag = fast_integration_@FROM
+							days >60
+						}
+						has_state_flag = {
+							flag = normal_integration_@FROM
+							days >120
+						}
+						has_state_flag = {
+							flag = slow_integration_@FROM
+							days >240
+						}
+					}
+				}
+			}
+		}
+		
+		complete_effect = {
+			country_event = { id = cor_sta.2 hours = 0 }
+		}
+	}
+}
+
+coring = {
+	start_coring = {
+	
+		icon = generic_propaganda
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		visible = {
+			any_state = {
+				AND = {
+					is_controlled_by = ROOT
+					NOT = { is_core_of = ROOT }
+					AND = {
+						NOT = { has_state_flag = fast_coring_@FROM }
+						NOT = { has_state_flag = normal_coring_@FROM }
+						NOT = { has_state_flag = slow_coring_@FROM }
+						NOT = { has_state_flag = never_core_@FROM }
+					}
+				}
+			}
+		}
+		
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = coring_ready_requirements
+				AND = {
+					has_war = no
+					any_state = {
+						AND = {
+							is_owned_by = FROM
+							NOT = { is_core_of = FROM }
+							has_state_flag = integrated_by_@FROM
+							OR = {
+								any_neighbor_state = {
+									AND = {
+										is_core_of = FROM
+										is_owned_by = FROM
+									}
+								}
+								AND = {
+									is_coastal = yes
+									FROM = {
+										any_owned_state = {
+											AND = {
+												is_core_of = FROM
+												is_coastal = yes
+											}
+										}
+									}
+									all_neighbor_state = {
+										has_state_flag = integrated_by_@FROM
+										is_owned_by = FROM
+									}
+								}
+							}
+							NOT = {
+								OR = {
+									has_state_flag = fast_coring_@FROM
+									has_state_flag = normal_coring_@FROM
+									has_state_flag = slow_coring_@FROM
+									has_state_flag = never_core_@FROM
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		
+		complete_effect = {
+			country_event = { id = cor_sta.3 hours = 0 }
+		}
+		
+	}
+	
+	finish_coring = {
+		
+		icon = generic_propaganda
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		visible = {
+			any_state = {
+				AND = {
+					is_controlled_by = ROOT
+					NOT = { is_core_of = ROOT }
+					OR = {
+						has_state_flag = fast_coring_@FROM
+						has_state_flag = normal_coring_@FROM
+						has_state_flag = slow_coring_@FROM
+					}
+				}
+			}
+		}
+		
+		available = {
+			any_state = {
+				AND = {
+					is_owned_by = FROM
+					OR = {
+						has_state_flag = {
+							flag = fast_coring_@FROM
+							days >80
+						}
+						has_state_flag = {
+							flag = normal_coring_@FROM
+							days >170
+						}
+						has_state_flag = {
+							flag = slow_coring_@FROM
+							days >350
+						}
+					}
+				}
+			}
+		}
+		
+		complete_effect = {
+			country_event = { id = cor_sta.4 hours = 0 }
+		}
+	}
+	
+	reenable_coring = {
+		icon = generic_propaganda
+		
+		visible = {
+			always = yes
+		}
+		
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = reenable_coring_requirements
+				any_state = {
+					has_state_flag = never_core_@FROM
+				}
+			}
+		}
+		
+		complete_effect = {
+			every_state = {
+				limit = {
+					has_state_flag = never_core_@FROM
+				}
+				clr_state_flag = never_core_@FROM
+			}
+		}
+	}
+}

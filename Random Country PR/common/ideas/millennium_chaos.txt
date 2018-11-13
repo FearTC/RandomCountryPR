@@ -1,0 +1,10 @@
+ideas = {
+	hidden_ideas = {
+		millennium_chaos_no_viable_neighbours = {
+			picture = international_treaty
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+}

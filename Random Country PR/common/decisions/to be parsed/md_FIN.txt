@@ -1,0 +1,166 @@
+special_projects = {
+
+	construct_salpa_line = {
+
+		icon = generic_construction
+
+		allowed = {
+			original_tag = FIN
+		}
+
+		available = {
+			controls_state = 722
+			controls_state = 148
+			controls_state = 150
+			controls_state = 111
+			command_power > 50
+		}
+
+		cost = 120
+		days_remove = 300
+		
+		fire_only_once = yes
+		
+
+		ai_will_do = {
+			factor = 200
+		}
+
+		visible = {
+			original_tag = FIN
+		}
+
+		modifier = {
+			war_support_weekly = -0.001
+			command_power_gain = -0.05
+		}
+		
+		complete_effect = {
+			custom_effect_tooltip = construct_salpa_line_tt
+			hidden_effect = {
+				111 = {
+					add_building_construction = {
+						type = bunker
+						level = 3
+						province = 6186
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						level = 3
+						province = 6082
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						level = 3
+						province = 52
+						instant_build = yes
+					}
+				}
+				150 = {
+					add_building_construction = {
+						type = bunker
+						level = 3
+						province = 139
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						level = 3
+						province = 3030
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						level = 3
+						province = 9181
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						level = 3
+						province = 6210
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						level = 3
+						province = 3185
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						level = 3
+						province = 7
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						level = 3
+						province = 6134
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						level = 3
+						province = 3073
+						instant_build = yes
+					}
+				}
+				148 = {
+					add_building_construction = {
+						type = bunker
+						level = 3
+						province = 6045
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						level = 3
+						province = 3156
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						level = 3
+						province = 11030
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						level = 3
+						province = 3107
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						level = 3
+						province = 3158
+						instant_build = yes
+					}
+				}
+				722 = {
+					add_building_construction = {
+						type = bunker
+						level = 3
+						province = 11142
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						level = 3
+						province = 6183
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						level = 3
+						province = 9104
+						instant_build = yes
+					}
+				}
+			}
+		}
+	}
+}

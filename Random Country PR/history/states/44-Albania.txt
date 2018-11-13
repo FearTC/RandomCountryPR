@@ -1,0 +1,29 @@
+
+state={
+	id=44
+	name="STATE_44"
+	manpower = 1
+	
+	
+	state_category = wasteland
+	
+	history={
+		owner = ALB
+		
+		buildings = {
+			infrastructure = 3
+			
+			
+			
+			11767 = {
+				naval_base = 4
+			}
+		}
+		
+		victory_points = { 914 1}
+	}
+
+	provinces={
+		914 3448 3884 3896 6900 9780 9875 9914 11762 11767 
+	}
+}

@@ -1,0 +1,24 @@
+
+state={
+	id=323
+	name="STATE_323"
+	manpower = 1
+	
+	state_category = wasteland
+	
+	history={
+		owner = NEP
+		buildings = {
+			infrastructure = 3
+			
+			
+		}
+		
+		
+		victory_points = { 4386 1}
+	}
+
+	provinces={
+		4386 4987 5310 7374 10825 10910 12892 
+	}
+}

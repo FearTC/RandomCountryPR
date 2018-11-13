@@ -1,0 +1,21 @@
+
+state={
+	id=743
+	name="STATE_743"
+
+	history={
+		owner = CHI
+		buildings = {
+			infrastructure = 3
+
+		}
+
+	}
+
+	provinces={
+		10000 
+	}
+	manpower = 1
+	buildings_max_level_factor=1.000
+	state_category=wasteland
+}

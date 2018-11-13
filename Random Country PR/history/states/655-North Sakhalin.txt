@@ -1,0 +1,21 @@
+
+state={
+	id=655
+	name="STATE_655"
+	manpower = 1
+	
+	state_category = wasteland
+	history={
+		owner = SOV
+		
+		victory_points = { 855 1}
+		buildings = {
+			infrastructure = 3
+			
+		}
+	}
+
+	provinces={
+		855 1742 1755 
+	}
+}

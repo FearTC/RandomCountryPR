@@ -1,0 +1,1148 @@
+economy_decisions = {
+
+	embargo_warmonger = {
+
+		icon = generic_industry
+
+		available = {
+			NOT = { has_country_flag = embargoing_warmonger }
+			FROM = {
+				OR = {
+					has_offensive_war = yes
+					is_justifying_wargoal_against = ROOT
+				}
+			}
+		}
+
+		visible = {
+			FROM = { NOT = { has_government = ROOT } }
+			FROM = {
+				NOT = { is_neighbor_of = ROOT }
+				OR = {
+					AND = {
+						NOT = { has_government = ROOT }
+						has_offensive_war = yes
+						has_added_tension_amount > 30
+					}
+					is_justifying_wargoal_against = ROOT
+					has_offensive_war_with = ROOT
+				}
+			}
+		}
+
+		target_trigger = {
+			FROM = {
+				NOT = { is_neighbor_of = ROOT }
+				OR = {
+					AND = {
+						NOT = { has_government = ROOT }
+						has_offensive_war = yes
+						has_added_tension_amount > 30
+					}
+					is_justifying_wargoal_against = ROOT
+					has_offensive_war_with = ROOT
+				}
+			}
+		}
+
+		days_remove = 1
+
+		fire_only_once = yes
+
+		cost = 75
+
+		complete_effect = {
+			set_country_flag = embargoing_warmonger
+			ROOT = { 
+				add_opinion_modifier = { target = FROM modifier = embargo } 
+			}
+			FROM = {
+				add_opinion_modifier = { target = ROOT modifier = embargo }
+			}
+		}
+		remove_effect = {
+			clr_country_flag = embargoing_warmonger
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+}
+
+war_measures = {
+	
+	hold_speech = {
+
+		icon = generic_political_discourse
+
+		available = {
+			has_war = yes
+			OR {
+				has_stability < 0.51
+				has_war_support <0.51
+			}
+		}
+
+		visible = {
+			has_war = yes
+		}
+
+		remove_trigger = {
+        }
+		
+		fire_only_once = no
+
+		complete_effect = {
+			add_stability = 0.05
+			add_war_support = 0.05
+		}
+
+		days_remove = 10
+		days_re_enable = 150
+
+		cost = 150
+
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 1
+				OR {
+					has_stability < 0.5
+					has_war_support < 0.5
+				}
+			}
+		}
+	}
+	
+	food_rationing = {
+
+		icon = oppression
+
+		available = {
+			
+		}
+
+		visible = {
+			always = yes
+		}
+
+		remove_trigger = {
+            has_war = no
+        }
+		
+		fire_only_once = no
+
+		modifier = {
+			consumer_goods_factor = -0.1
+			war_support_weekly = -0.005
+			stability_weekly = -0.005
+		}
+
+
+		days_remove = 90
+		days_re_enable = 80
+
+		cost = 50
+
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 1
+				has_stability > 0.8
+			}
+		}
+	}
+	
+	employ_secret_police = {
+
+		icon = generic_political_discourse
+
+		available = {
+			
+		}
+
+		visible = {
+			always = yes
+		}
+
+		remove_trigger = {
+            has_war = no
+        }
+		
+		fire_only_once = no
+
+		modifier = {
+			foreign_subversive_activites = -0.25
+			enemy_partisan_effect = -0.1
+			stability_weekly = -0.005
+		}
+
+
+		days_remove = 90
+		days_re_enable = 80
+
+		cost = 50
+
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 1
+				has_stability > 0.8
+			}
+		}
+	}
+
+	peasant_draft = {
+
+		icon = generic_prepare_civil_war
+
+		available = {
+			
+		}
+
+		visible = {
+			always = yes
+		}
+
+		remove_trigger = {
+            has_war = no
+        }
+		
+		fire_only_once = no
+
+		modifier = {
+			consumer_goods_factor = 0.05
+			conscription = 0.01
+			war_support_weekly = -0.002
+		}
+
+
+		days_remove = -1
+		days_re_enable = 100
+
+		cost = 80
+
+		complete_effect = {
+
+		}
+
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 1
+				has_war_support > 0.7
+			}
+		}
+	}
+	
+	seize_civilian_trucks = {
+
+		icon = generic_civil_support
+
+		available = {
+		}
+
+		visible = {
+			has_tech = motorised_infantry
+		}
+
+		remove_trigger = {
+            has_war = no
+        }
+		
+		fire_only_once = no
+
+		modifier = {
+			war_support_weekly = -0.01
+		}
+		
+		complete_effect = {
+			add_stability = -0.01
+			add_equipment_to_stockpile = {
+				type = motorized_equipment_1
+				amount = 100
+			}
+		}
+
+		days_remove = 70
+		days_re_enable = 100
+
+		cost = 75
+
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 1
+				has_stability < 0.6
+			}
+		}
+	}
+	
+	seize_civilian_vessels = {
+
+		icon = generic_naval
+
+		available = {
+		}
+
+		visible = {
+			any_state = {
+				is_controlled_by = ROOT
+				is_coastal = yes
+			}
+		}
+
+		remove_trigger = {
+            has_war = no
+        }
+		
+		fire_only_once = no
+
+		modifier = {
+			war_support_weekly = -0.02
+		}
+		
+		complete_effect = {
+			add_stability = -0.02
+			add_equipment_to_stockpile = {
+				type = convoy
+				amount = 25
+			}
+		}
+
+		days_remove = 70
+		days_re_enable = 100
+
+		cost = 75
+
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 1
+				has_stability < 0.6
+			}
+		}
+	}
+	
+	convert_tractor_vehicles = {
+
+		icon = generic_tank
+
+		available = {
+		}
+
+		visible = {
+			has_tech = gwtank
+		}
+
+		remove_trigger = {
+            has_war = no
+        }
+		
+		fire_only_once = no
+
+		modifier = {
+			industrial_capacity_factory = -0.005
+		}
+		
+		complete_effect = {
+			add_equipment_to_stockpile = {
+				type = gw_tank_equipment
+				amount = 15
+			}
+		}
+
+		days_remove = 70
+		days_re_enable = 100
+
+		cost = 75
+
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 1
+				has_stability < 0.6
+			}
+		}
+	}
+	
+	convert_trainer_aircraft = {
+
+		icon = generic_air
+
+		available = {
+		}
+
+		visible = {
+			has_tech = early_fighter
+		}
+
+		remove_trigger = {
+            has_war = no
+        }
+		
+		fire_only_once = no
+
+		modifier = {
+			experience_gain_air = -0.025
+			industrial_capacity_factory = -0.005
+		}
+		
+		complete_effect = {
+			add_equipment_to_stockpile = {
+				type = fighter_equipment_0
+				amount = 25
+			}
+		}
+
+		days_remove = 70
+		days_re_enable = 100
+
+		cost = 75
+
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 1
+				has_stability < 0.6
+			}
+		}
+	}
+	
+	convert_civilian_airlines = {
+
+		icon = generic_air
+
+		available = {
+		}
+
+		visible = {
+			has_tech = early_bomber
+		}
+
+		remove_trigger = {
+            has_war = no
+        }
+		
+		fire_only_once = no
+
+		modifier = {
+			stability_weekly = -0.025
+			war_support_weekly = -0.025
+			industrial_capacity_factory = -0.005
+		}
+		
+		complete_effect = {
+			add_equipment_to_stockpile = {
+                type = tac_bomber_equipment_0
+                amount = 10
+            }
+		}
+
+		days_remove = 70
+		days_re_enable = 100
+
+		cost = 75
+
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 1
+				has_stability < 0.6
+			}
+		}
+	}
+}
+	
+political_actions = {
+
+	anti_war_speech = {
+
+		icon = generic_political_discourse
+
+		available = {
+			has_war = no
+		}
+
+		visible = {
+			has_war = no
+		}
+
+		complete_effect = {
+			add_stability = 0.20
+			add_war_support = -0.10
+		}
+		
+		modifier = {
+			political_power_cost = 0.10
+		}
+
+		days_remove = 10
+		days_re_enable = 150
+
+		cost = 150
+
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 1
+				has_stability < 0.4
+				has_war_support > 0.8
+			}
+		}
+	}
+
+	abandon_neutrality = {
+
+		icon = generic_break_treaty
+
+		visible = {
+			has_idea = neutrality_idea
+			NOT = {
+				has_country_flag = declared_neutrality
+			}
+		}
+	
+		complete_effect = {
+			set_country_flag = abandoned_neutrality
+			remove_ideas = neutrality_idea
+		}
+	
+		days_remove = 720
+		cost = 100
+	
+		ai_will_do = {
+			factor = 0
+		}
+		
+		remove_effect = {
+			clr_country_flag = abandoned_neutrality
+		}
+	}
+	
+	declare_neutrality = {
+
+		icon = generic_decision
+
+		available = {
+			has_war = no
+			has_added_tension_amount < 10
+		}
+		
+		visible = {
+			NOT = {
+				has_idea = neutrality_idea
+				has_country_flag = abandoned_neutrality
+				OR = {
+					has_government = fascism
+					has_government = communism
+				}
+			}
+		}
+	
+		complete_effect = {
+			add_stability = 0.05
+			add_war_support = -0.1
+			set_country_flag = declared_neutrality
+			add_ideas = neutrality_idea
+		}
+	
+		days_remove = 720
+		cost = 100
+	
+		ai_will_do = {
+			factor = 0
+		}
+		
+		remove_effect = {
+			clr_country_flag = declared_neutrality
+		}
+	}
+
+	political_campaigning_fascist_government = {
+
+		icon = generic_nationalism
+
+		visible = {
+			has_government = fascism
+		}
+	
+		modifier = {
+			fascism_drift = 0.02
+			political_power_cost = 0.25
+		}
+	
+		days_remove = 100
+		days_re_enable = 75
+		cost = 75
+	
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	political_campaigning_democratic_government = {
+
+		icon = generic_nationalism
+
+		visible = {
+			has_government = democratic
+		}
+	
+		modifier = {
+			democratic_drift = 0.02
+			political_power_cost = 0.25
+		}
+	
+		days_remove = 100
+		days_re_enable = 75
+		cost = 75
+	
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	political_campaigning_communist_government = {
+
+		icon = generic_nationalism
+
+		visible = {
+			has_government = communism
+		}
+	
+		modifier = {
+			communism_drift = 0.02
+			political_power_cost = 0.25
+		}
+	
+		days_remove = 100
+		days_re_enable = 75
+		cost = 75
+	
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	political_campaigning_neutrality_government = {
+
+		icon = generic_nationalism
+
+		visible = {
+			has_government = neutrality
+		}
+	
+		modifier = {
+			neutrality_drift = 0.02
+			political_power_cost = 0.25
+		}
+	
+		days_remove = 100
+		days_re_enable = 75
+		cost = 75
+	
+		ai_will_do = {
+			factor = 0
+		}
+	}
+}
+
+special_projects = {
+	
+	summon_intellectuals = {
+
+		icon = generic_research
+
+		visible = {
+			
+		}
+	
+		modifier = {
+			research_time_factor = -0.05
+			political_power_cost = 0.25
+		}
+	
+		days_remove = 100
+		days_re_enable = 75
+		cost = 120
+	
+		ai_will_do = {
+			factor = 0
+		}
+	}
+}
+
+master_of_puppets_category = {
+
+	host_independence_campaign = {
+
+		icon = generic_decision
+
+		visible = {
+			is_subject = yes
+		}
+	
+		modifier = {
+			autonomy_gain = 0.1
+		}
+	
+		days_remove = 100
+		days_re_enable = 75
+		cost = 75
+	
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	stage_military_revolt = {
+
+		icon = generic_ignite_civil_war
+
+		visible = {
+			is_subject = yes
+		}
+	
+		modifier = {
+		}
+		
+		complete_effect = {
+			add_autonomy_ratio = {
+				value = 0.1
+				localization = generic_stage_military_revolt
+			}
+			add_manpower = -250
+			add_equipment_to_stockpile = {
+				type = infantry_equipment_1
+				amount = -250
+            }
+		}
+	
+		days_remove = 10
+		days_re_enable = 200
+		cost = 100
+	
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	national_visit = {
+
+		icon = generic_decision
+
+		available = {
+		}
+		
+		visible = {
+			FROM = {
+				is_subject_of = ROOT
+			}
+		}
+		
+		target_trigger = {
+			FROM = {
+				is_subject_of = ROOT
+			}
+		}
+	
+		complete_effect = {
+			FROM = {
+				add_autonomy_ratio = {
+				value = -0.1
+				localization = generic_national_visit
+				}
+			}
+		}
+	
+		days_remove = 100
+		days_re_enable = 75
+		cost = 75
+	
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}
+
+foreign_politics = {
+
+	purge_external_influences = {
+
+		icon = generic_nationalism
+
+		available = {
+		}
+		
+		visible = {
+			OR = {
+				has_idea = fascist_influence
+				has_idea = communist_influence
+				has_idea = democratic_influence
+			}
+		}
+	
+		complete_effect = {
+			if = {
+				limit = {
+					has_idea = fascist_influence
+					}
+				remove_ideas = fascist_influence
+			}
+			if = {
+				limit = {
+					has_idea = communist_influence
+					}
+				remove_ideas = communist_influence
+			}
+			if = {
+				limit = {
+					has_idea = democratic_influence
+					}
+				remove_ideas = democratic_influence
+			}
+		}
+	
+		days_remove = 50
+		days_re_enable = 75
+		cost = 75
+	
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}
+
+coalition_government_category = {
+
+	recruit_fascist_minority = {
+
+		icon = generic_civil_support
+
+		visible = {
+			fascism > 0.2
+			has_war = yes
+			NOT = {
+				has_government = fascism
+			}
+		}
+	
+		modifier = {
+			war_support_weekly = 0.002
+			fascism_drift = 0.1
+			conscription = 0.01
+		}
+	
+		days_remove = 100
+		days_re_enable = 75
+		cost = 75
+	
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	recruit_communist_minority = {
+
+		icon = generic_civil_support
+
+		visible = {
+			communism > 0.2
+			has_war = yes
+			NOT = {
+				has_government = communism
+			}
+		}
+	
+		modifier = {
+			war_support_weekly = 0.002
+			communism_drift = 0.1
+			conscription = 0.01
+		}
+	
+		days_remove = 100
+		days_re_enable = 75
+		cost = 75
+	
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}
+
+partisans_category = {
+
+	support_communist_partisans = {
+
+		icon = generic_prepare_civil_war
+
+		visible = {
+			communism > 0.2
+			has_capitulated = yes
+		}
+	
+		modifier = {
+			war_support_weekly = 0.002
+			communism_drift = 0.1
+		}
+	
+		complete_effect = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment_1
+				amount = 1000
+            }
+		}
+	
+		days_remove = 50
+		days_re_enable = 75
+		cost = 75
+	
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	support_fascist_partisans = {
+
+		icon = generic_prepare_civil_war
+
+		visible = {
+			fascism > 0.2
+			has_capitulated = yes
+		}
+	
+		modifier = {
+			war_support_weekly = 0.002
+			fascism_drift = 0.1
+		}
+	
+		complete_effect = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment_1
+				amount = 1000
+            }
+		}
+	
+		days_remove = 50
+		days_re_enable = 75
+		cost = 75
+	
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	recruit_fascist_partisans = {
+
+		icon = generic_prepare_civil_war
+
+		visible = {
+			fascism > 0.4
+			NOT = {
+				has_government = communism
+			}
+			has_capitulated = yes
+			has_equipment = {
+				infantry_equipment > 199
+			}
+		}
+	
+		modifier = {
+		}
+	
+		complete_effect = {
+			add_popularity = { ideology = fascism popularity = 0.2 }
+			custom_effect_tooltip = recruit_fascist_party_partisans_tt
+			hidden_effect = {
+				division_template = {
+					name = "Fascist Partisans"
+					priority = 2
+				
+					regiments = {
+						infantry = { x = 0 y = 0 }
+						
+						infantry = { x = 1 y = 0 }
+					}
+				}
+				
+				random_owned_state = {
+					limit = {
+						NOT = { 
+							is_fully_controlled_by = ROOT
+						}
+						is_owned_by = ROOT
+					}
+					ROOT = {
+						set_state_controller = PREV
+					}
+					create_unit = {
+						division = "name = \"Fascist Partisans\" division_template = \"Fascist Partisans\" start_experience_factor = 0.0" 
+						owner = ROOT
+					}
+				}
+			}
+		}
+	
+		days_remove = 80
+		days_re_enable = 200
+		cost = 200
+	
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	recruit_communist_partisans = {
+
+		icon = generic_prepare_civil_war
+
+		visible = {
+			communism > 0.4
+			NOT = {
+				has_government = fascism
+			}
+			has_capitulated = yes
+			has_equipment = {
+				infantry_equipment > 199
+			}
+		}
+	
+		modifier = {
+		}
+	
+		complete_effect = {
+			add_popularity = { ideology = communism popularity = 0.2 }
+			custom_effect_tooltip = recruit_communism_party_partisans_tt
+			hidden_effect = {
+				division_template = {
+					name = "Communist Partisans"
+					priority = 2
+				
+					regiments = {
+						infantry = { x = 0 y = 0 }
+						
+						infantry = { x = 1 y = 0 }
+					}
+				}
+				
+				random_owned_state = {
+					limit = {
+						NOT = { 
+							is_fully_controlled_by = ROOT
+						}
+						is_owned_by = ROOT
+					}
+					ROOT = {
+						set_state_controller = PREV
+					}
+					create_unit = {
+						division = "name = \"Communist Partisans\" division_template = \"Communist Partisans\" start_experience_factor = 0.0" 
+						owner = ROOT
+					}
+				}
+			}
+		}
+	
+		days_remove = 80
+		days_re_enable = 200
+		cost = 200
+	
+		ai_will_do = {
+			base = 0
+		}
+	}
+}
+	
+internal_issues_category = {
+
+	housing_program = {
+
+		icon = generic_construction
+
+		visible = {
+		}
+	
+		modifier = {
+			conscription = 0.005
+			consumer_goods_factor = 0.02
+			political_power_cost = 0.25
+		}
+	
+		complete_effect = {
+		}
+	
+		days_remove = -1
+		days_re_enable = 0
+		cost = 100
+	
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	women_in_aviation = {
+
+		icon = generic_air
+
+		visible = {
+		}
+	
+		complete_effect = {
+			air_experience = 25
+			set_rule = {
+                can_generate_female_aces = yes
+            }
+		}
+	
+		days_remove = -1
+		cost = 100
+	
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	employ_civilian_workshops = {
+
+		icon = generic_industry
+
+		visible = {
+		}
+	
+		modifier = {
+			industrial_capacity_factory = 0.05
+			stability_weekly = -0.002
+		}
+	
+		days_remove = 80
+		days_re_enable = 200
+		cost = 80
+	
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	finance_public_news_offices = {
+
+		icon = ger_mefo_bills
+
+		visible = {
+		}
+	
+		modifier = {
+			stability_weekly = 0.01
+			political_power_cost = 0.50
+		}
+	
+		days_remove = 100
+		days_re_enable = 150
+		cost = 100
+	
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

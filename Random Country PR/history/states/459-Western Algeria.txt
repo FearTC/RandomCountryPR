@@ -1,0 +1,31 @@
+
+state={
+	id=459
+	name="STATE_459" # Algiers
+	manpower = 1
+	state_category = wasteland
+	
+	
+
+	history={
+		owner = FRA
+		
+		
+		
+		buildings = {
+			infrastructure = 3
+			
+			1145 = {
+				naval_base = 2
+			}
+			7132 = {
+				naval_base = 6
+			}
+		}
+		victory_points = { 1013 1}
+	}
+
+	provinces={
+		1013 1145 4116 4131 4146 7132 9964 11923 11939 12760 
+	}
+}

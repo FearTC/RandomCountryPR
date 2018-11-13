@@ -1,0 +1,57 @@
+
+state={
+	id=28
+	name="STATE_28" # Alsace-Lorraine
+	manpower = 1
+	
+	state_category = wasteland
+	
+
+	history={
+		owner = FRA
+		
+		
+		
+		buildings = {
+			infrastructure = 3
+			
+			549 = {
+				bunker = 0
+
+			}
+			678 = {
+				bunker = 0
+
+			}
+			3629 = {
+				bunker = 0
+
+			}
+			6529 = {
+				bunker = 0
+
+			}
+			9503 = {
+				bunker = 0
+
+			}
+			9559 = {
+				bunker = 0
+
+			}
+			11502 = {
+				bunker = 0
+
+			}
+			
+			
+
+		}
+		
+		victory_points = { 549 1}
+	}
+
+	provinces={
+		549 678 1346 3629 6529 9503 9559 11502 
+	}
+}

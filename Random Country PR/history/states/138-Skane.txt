@@ -1,0 +1,33 @@
+
+state={
+	id=138
+	name="STATE_138"
+	manpower = 1
+	
+	state_category = wasteland
+
+	history={
+		owner = SWE
+		
+		
+		buildings = {
+			infrastructure = 3
+			
+			
+			11215 = {
+				naval_base = 5
+				coastal_bunker = 0
+			}
+			9279 = {
+				naval_base = 5
+				coastal_bunker = 0
+			}
+		}
+		
+		victory_points = { 3307 1}
+	}
+
+	provinces={
+		3307 6120 6345 6412 9279 9300 9362 11160 11215 11327 11376 
+	}
+}

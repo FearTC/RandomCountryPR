@@ -1,0 +1,23 @@
+ChaosAI_decision = {
+	ChaosAI_dec = {
+
+		icon = generic_political_actions
+
+		fire_only_once = no
+
+		available = {
+			is_ai = no
+		}
+
+		cost = 0
+
+		visible = {
+			always = yes
+		}
+
+		complete_effect = {
+			country_event = war_creation.5
+		}
+
+	}
+}

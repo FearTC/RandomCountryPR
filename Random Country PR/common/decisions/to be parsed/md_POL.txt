@@ -1,0 +1,62 @@
+miedzymorze_category = {
+
+	extend_the_miedzymorze = {
+
+		icon = generic_form_nation
+
+		available = {
+		}
+
+		visible = {
+			original_tag = POL
+			POL = {
+				is_faction_leader = yes
+			}
+			FROM = {
+				exists = yes
+				is_in_faction = no
+			}
+		}
+
+		remove_trigger = {
+			FROM = {
+				is_in_faction_with = POL
+			}
+        }
+		
+		fire_only_once = no
+
+		modifier = {
+		}
+
+		target_trigger = {
+			FROM = {
+				OR = {
+					tag = HUN
+					tag = FIN
+					tag = ROM
+					tag = CZE
+					tag = YUG
+				}
+			}
+		}
+		
+		days_remove = -1
+		days_re_enable = 100
+
+		cost = 100
+
+		complete_effect = {
+			FROM = {
+				country_event = generic.5
+			}
+		}
+
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 1
+			}
+		}
+	}
+}

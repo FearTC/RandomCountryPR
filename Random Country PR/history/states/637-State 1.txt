@@ -1,0 +1,26 @@
+
+state={
+	id=637
+	name="STATE_637"
+
+	history={
+		owner = SOV
+		buildings = {
+			infrastructure = 3
+			12207 = {
+				naval_base = 1
+
+			}
+
+		}
+		
+		victory_points = { 1823 1}
+
+	}
+
+	provinces={
+		1823 1839 1863 4728 7878 12207 12522 
+	}
+	manpower = 1
+	state_category = wasteland
+}

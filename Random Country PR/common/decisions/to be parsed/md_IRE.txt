@@ -1,0 +1,89 @@
+IRE_ira_category = {
+
+	IRE_raid_weapon_depot = {
+
+		icon = ger_military_buildup
+
+		allowed = {
+			original_tag = IRE
+		}
+
+		available = {
+			has_war_support < 0.6
+			original_tag = IRE
+			ENG = {
+				controls_state = 119
+			}
+		}
+		
+		days_remove = 100
+		days_re_enable = 50
+
+		cost = 75
+
+		ai_will_do = {
+			factor = 200
+		}
+
+		visible = {
+			original_tag = IRE
+			ENG = {
+				controls_state = 119
+			}
+		}
+
+		complete_effect = {
+			ENG = {
+				country_event = { id = ira.1 days = 1 }
+			}
+			add_war_support = 0.02
+			add_equipment_to_stockpile = {
+                type = infantry_equipment_1
+                amount = 50
+            }
+		}
+	}
+	
+	IRE_stage_riot_in_northern_ireland = {
+
+		icon = generic_ignite_civil_war
+
+		allowed = {
+			original_tag = IRE
+		}
+
+		available = {
+			has_war_support < 0.6
+			original_tag = IRE
+			ENG = {
+				controls_state = 119
+			}
+		}
+		
+		days_remove = 50
+		days_re_enable = 100
+
+		cost = 50
+
+		ai_will_do = {
+			factor = 200
+		}
+
+		visible = {
+			original_tag = IRE
+			ENG = {
+				controls_state = 119
+			}
+		}
+
+		complete_effect = {
+			ENG = {
+				country_event = { id = ira.2 days = 1 }
+			}
+			add_war_support = 0.01
+			ENG = {
+				add_stability = -0.02
+			}
+		}
+	}
+}

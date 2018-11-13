@@ -1,0 +1,27 @@
+
+state={
+	id=180
+	name="STATE_180"
+	manpower = 1
+	
+	state_category = wasteland
+
+	history={
+		owner = POR
+		
+		buildings = {
+			infrastructure = 3
+			
+			
+			9817 = {
+				naval_base = 3
+			}
+		}
+		
+		victory_points = { 724 1}
+	}
+
+	provinces={
+		724 877 3892 6921 6941 9817 11673 
+	}
+}

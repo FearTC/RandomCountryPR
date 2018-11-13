@@ -1,0 +1,2 @@
+dynamic_tags  = yes # any tags after this is used for temporary civil wars
+D99		= "countries/D99.txt"

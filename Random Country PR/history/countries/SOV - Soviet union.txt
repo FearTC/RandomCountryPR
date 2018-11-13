@@ -1,0 +1,31 @@
+﻿set_technology = { infantry_weapons = 1 tech_support = 1 early_fighter = 1 early_destroyer = 1 transport = 1  } 
+oob = "RMAP_TEMPLATE"
+
+set_stability = 0.6 
+set_war_support = 0.5
+
+set_politics = {
+
+	parties = {
+		democratic = { 
+			popularity = 25
+		}
+
+		fascism = {
+			popularity = 25
+		}
+		
+		communism = {
+			popularity = 25
+		}
+		
+		neutrality = { 
+			popularity = 25
+		}
+	}
+	
+	ruling_party = neutrality
+	last_election = "1936.1.1"
+	election_frequency = 0
+	elections_allowed = no
+}

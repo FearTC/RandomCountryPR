@@ -1,0 +1,34 @@
+
+state={
+	id=282
+	name="STATE_282" # Kanto
+	manpower = 1
+	
+	state_category = wasteland
+	
+	
+
+	history={
+		owner = JAP
+		
+		buildings = {
+			infrastructure = 3
+			
+			
+			
+			
+			9998 = {
+				naval_base = 6
+
+			}
+
+		}
+		
+		victory_points = { 993 1}
+
+	}
+
+	provinces={
+		993 1097 1113 1182 4000 4100 4184 4188 7016 9998 11908 
+	}
+}

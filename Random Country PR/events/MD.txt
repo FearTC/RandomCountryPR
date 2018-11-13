@@ -1,0 +1,18 @@
+﻿add_namespace = md
+
+country_event = {
+	id = md.1
+	title = md.1.t
+	desc = md.1.desc
+	picture = GFX_news_event_generic_parliament
+
+	is_triggered_only = yes
+	hidden = yes
+	
+	option = {
+		name = md.1.a
+		FROM = { 
+			add_to_faction = ROOT
+		}
+	}
+}

@@ -1,0 +1,57 @@
+scripted_gui = {
+
+	st_open = {
+		context_type = player_context
+
+		window_name = "st_open_container"
+
+		visible = {
+			NOT = { has_global_flag = hidden_switch }
+		}
+
+		effects = {
+			open_ST_click = {
+				if = {
+					limit = { NOT = { has_global_flag = transfer_enabled } }
+					set_global_flag = transfer_enabled
+				}
+				else = {
+					clr_global_flag = transfer_enabled
+				}
+			}
+		}
+		triggers = {
+			open_ST_click_enabled = {
+				always = yes
+			}
+		}
+	}
+	
+	st_hide = {
+		context_type = player_context
+
+		window_name = "st_hide_container"
+
+		visible = {
+			always = yes
+		}
+
+		effects = {
+			hide_ST_click = {
+				if = {
+					limit = { NOT = { has_global_flag = hidden_switch } }
+					set_global_flag = hidden_switch
+				}
+				else = {
+					clr_global_flag = hidden_switch
+				}
+			}
+		}
+		triggers = {
+			hide_ST_click_enabled = {
+				always = yes
+			}
+		}
+	}
+
+}

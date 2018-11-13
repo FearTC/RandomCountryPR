@@ -1,0 +1,23 @@
+
+state={
+	id=432
+	name="STATE_432"
+	manpower = 1
+	
+	state_category = wasteland
+	
+	
+
+	history={
+		owner = RAJ
+		victory_points = { 1497 1}
+		buildings = {
+			infrastructure = 3
+		}
+
+	}
+
+	provinces={
+		1497 1525 1553 1581 7455 10090 10349 10514 12366 12395 
+	}
+}

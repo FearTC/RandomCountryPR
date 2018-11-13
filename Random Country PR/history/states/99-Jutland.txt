@@ -1,0 +1,30 @@
+state= {
+	id=99
+	name="STATE_99"
+	manpower = 1
+	
+	
+	state_category = wasteland
+
+	history=
+	{
+		owner = DEN
+		
+		buildings = {
+			infrastructure = 3
+			
+			
+			394 = {
+				naval_base = 3
+			}
+			6364 = {
+				naval_base = 1
+			}
+		}
+		
+		victory_points = { 316 1}
+	}
+	provinces=
+	{
+316 332 394 399 3206 3277 3341 6235 6364 11251 	}
+}

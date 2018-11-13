@@ -1,0 +1,38 @@
+﻿add_namespace = ee
+
+country_event = {
+	id = ee.1
+	title = ee.1.t
+	desc = ee.1.d
+	picture = GFX_report_event_generic_read_write
+
+	fire_only_once = yes
+	
+	is_triggered_only = no
+	
+	mean_time_to_happen = { days = 100 }
+	
+	trigger = {
+	has_government = fascism
+	tag = GER
+	date < 1938.1.1
+	}
+
+	option = {
+		name = ee.1.a
+		hidden_effect = { kill_country_leader = yes 
+			create_country_leader = {
+			name = "Adolf Hitler"
+			picture = "Portrait_Germany_Adolf_Hitler.dds"
+			expire = "1965.1.1"
+			ideology = nazism
+			traits = {
+			}
+			}
+			}
+			custom_effect_tooltip = strangeman
+		}
+	option = {
+		name = ee.1.b
+	}
+	}

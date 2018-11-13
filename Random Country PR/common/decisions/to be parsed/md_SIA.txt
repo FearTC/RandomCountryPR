@@ -1,0 +1,49 @@
+political_actions = {
+
+	prathet_thai = {
+
+		icon = generic_form_nation
+
+		allowed = {
+			original_tag = SIA
+		}
+
+		available = {
+			original_tag = SIA
+			OR = {
+				has_government = fascism
+				has_government = neutrality
+			}
+		}
+
+		cost = 50
+
+		ai_will_do = {
+			factor = 200
+		}
+
+		visible = {
+			original_tag = SIA
+			OR = {
+				has_government = neutrality
+				has_government = fascism
+			}
+			date > 1939.1.1
+		}
+
+		complete_effect = {
+			set_cosmetic_tag = SIA_THAILAND
+			add_stability = 0.05
+			create_country_leader = {
+				name = "Plaek Phibunsongkhram"
+				desc = "POLITICS_PLAEK_PHIBUNSONGKHRAM_DESC"
+				picture = "gfx/leaders/Asia/Portrait_Asia_Generic_3.dds"
+				expire = "1965.1.1"
+				ideology = despotism
+				traits = {
+					#
+				}
+			}
+		}
+	}
+}

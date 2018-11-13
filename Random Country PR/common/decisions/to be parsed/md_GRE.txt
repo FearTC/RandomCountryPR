@@ -1,0 +1,72 @@
+special_projects = {
+
+	construct_metaxas_line = {
+
+		icon = generic_construction
+
+		allowed = {
+			original_tag = GRE
+		}
+
+		available = {
+			controls_state = 731
+			controls_state = 184
+			command_power > 15
+		}
+
+		cost = 120
+		days_remove = 75
+		
+		fire_only_once = yes
+		
+
+		ai_will_do = {
+			factor = 200
+		}
+
+		visible = {
+			original_tag = GRE
+			controls_state = 731
+			controls_state = 184
+		}
+
+		modifier = {
+			war_support_weekly = -0.001
+			command_power_gain = -0.05
+		}
+		
+		complete_effect = {
+			custom_effect_tooltip = construct_metaxas_line_tt
+			hidden_effect = {
+				731 = {
+					add_building_construction = {
+						type = bunker
+						level = 3
+						province = 3526
+						instant_build = yes
+					}
+				}
+				184 = {
+					add_building_construction = {
+						type = bunker
+						level = 3
+						province = 6990
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						level = 3
+						province = 9791
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						level = 3
+						province = 11774
+						instant_build = yes
+					}
+				}
+			}
+		}
+	}
+}

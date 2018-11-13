@@ -1,0 +1,23 @@
+state={
+	id=92
+	name="STATE_92"
+	manpower = 1
+	
+	state_category = wasteland
+	
+	history={
+		owner = POL
+		buildings = {
+			infrastructure = 3
+			
+			
+		}
+		
+
+		victory_points = { 3521 1}
+	}
+
+	provinces={
+		3521 3559 6484 6580 9452 9494 9521 9544 11399 11466 
+	}
+}

@@ -1,0 +1,24 @@
+
+state={
+	id=280
+	name="STATE_280"
+	
+	state_category = wasteland
+
+	history={
+		owner = BRA
+		buildings = {
+			infrastructure = 3
+
+		}
+		
+		victory_points = { 2142 1}
+
+	}
+
+	provinces={
+		2142 2147 2204 8175 11010 12939 
+	}
+	manpower = 1
+	
+}

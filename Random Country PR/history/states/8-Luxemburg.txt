@@ -1,0 +1,27 @@
+state=
+{
+	id=8
+	name="STATE_8"
+	
+	state_category = wasteland
+	
+	manpower = 1
+	
+
+	history=
+	{
+		owner = LUX
+		buildings = {
+			infrastructure = 3
+			
+			
+		}
+		victory_points = { 6583 1}
+		
+		
+	}
+
+	provinces=
+	{
+6583 	}
+}

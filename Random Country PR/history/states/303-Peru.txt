@@ -1,0 +1,30 @@
+
+state={
+	id=303
+	name="STATE_303" # Lima
+	manpower = 1
+	
+	
+	state_category = wasteland
+
+	history={
+		owner = PRU
+		buildings = {
+			infrastructure = 3
+			
+			
+			
+			12997 = {
+				naval_base = 5
+			}
+		}
+		
+		victory_points = { 2156 1}
+		
+
+	}
+
+	provinces={
+		2156 2162 5190 8199 12969 12983 12997 
+	}
+}

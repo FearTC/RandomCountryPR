@@ -1,0 +1,138 @@
+military_of_peace_category = {
+	
+	deploy_trainer_aircraft = {
+
+		icon = generic_air
+
+		available = {
+			has_war = no
+		}
+
+		visible = {
+			has_tech = early_fighter
+			OR = {
+				has_equipment = {
+					fighter_equipment_0 > 9
+				}
+				has_equipment = {
+					fighter_equipment_1 > 9
+				}
+				has_equipment = {
+					fighter_equipment_2 > 9
+				}
+				has_equipment = {
+					fighter_equipment_3 > 9
+				}
+			}
+		}
+
+		remove_trigger = {
+			has_war = yes
+        }
+
+		modifier = {
+			experience_gain_air = 0.1
+		}
+		
+		complete_effect = {
+		}
+
+		days_remove = 70
+		days_re_enable = 50
+
+		cost = 75
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	perform_naval_excercises = {
+
+		icon = generic_naval
+
+		available = {
+			has_war = no
+		}
+
+		visible = {
+			has_navy_size = {size > 0}
+		}
+
+		remove_trigger = {
+			has_war = yes
+		}
+
+		modifier = {
+			experience_gain_navy = 0.1
+		}
+
+		days_remove = 70
+		days_re_enable = 50
+		cost = 75
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	hold_national_parade = {
+
+		icon = generic_army_support
+
+		available = {
+			has_war = no
+		}
+
+		visible = {
+			has_war = no
+			NOT = {
+				has_idea = disarmed_nation
+			}
+		}
+
+		remove_trigger = {
+			has_war = yes
+        }
+
+		modifier = {
+			experience_gain_army = 0.1
+			war_support_weekly = 0.01
+			stability_weekly = 0.01
+			consumer_goods_factor = 0.05
+		}
+
+		days_remove = 50
+		days_re_enable = 150
+		cost = 120
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	commission_military_academy = {
+
+		icon = generic_construction
+
+		visible = {
+			NOT = {
+				has_idea = disarmed_nation
+				has_idea = undisturbed_isolation
+			}
+		}
+	
+		modifier = {
+			army_leader_start_level = 1
+			max_command_power = 5
+			command_power_gain_mult = 0.05
+		}
+
+		days_remove = -1
+		cost = 250
+	
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

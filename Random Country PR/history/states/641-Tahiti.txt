@@ -1,0 +1,23 @@
+
+state={
+	id=641
+	name="STATE_641"
+	manpower = 1
+	state_category = wasteland
+
+	history={
+		owner = FRA
+		buildings = {
+			infrastructure = 3
+			
+			12148 = {
+				naval_base = 1
+			}
+		}
+		victory_points = { 10188 1}
+	}
+
+	provinces={
+		10188 12148 
+	}
+}

@@ -1,0 +1,24 @@
+state={
+	id=91
+	name="STATE_91" # Lwow
+	manpower = 1
+	
+	state_category = wasteland
+	
+	history={
+		owner = POL
+		
+		buildings = {
+			infrastructure = 3
+			
+			
+		}
+		
+		victory_points = { 438 1}
+		
+	}
+
+	provinces={
+		438 491 536 3483 3562 9454 9468 9558 11427 11479 
+	}
+}

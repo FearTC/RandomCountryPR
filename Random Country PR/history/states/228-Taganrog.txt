@@ -1,0 +1,23 @@
+
+state={
+	id=228
+	name="STATE_228" # Voroshilovgrad
+	manpower = 1
+	
+	state_category = wasteland
+
+	history={
+		owner = SOV
+		
+		buildings = {
+			infrastructure = 3
+		}
+		
+		victory_points = { 523 1}
+		
+	}
+
+	provinces={
+		523 547 570 6505 6519 9446 9461 9476 11487 11513 
+	}
+}

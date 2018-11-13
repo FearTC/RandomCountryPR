@@ -1,0 +1,79 @@
+spriteTypes = {	
+
+	### categories
+	
+	spriteType = {
+		name = "GFX_decision_cat_generic_iberia"
+		texturefile = "gfx/interface/decisions/decision_cat_generic_iberia.dds"
+	}
+
+	spriteType = {
+		name = "GFX_decision_cat_generic_greater_bulgaria"
+		texturefile = "gfx/interface/decisions/decision_cat_generic_greater_bulgaria.dds"
+	}
+
+	spriteType = {
+		name = "GFX_decision_cat_generic_mexican_empire"
+		texturefile = "gfx/interface/decisions/decision_cat_generic_mexican_empire.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_decision_cat_generic_australasia"
+		texturefile = "gfx/interface/decisions/decision_cat_generic_australasia.dds"
+	}
+
+	spriteType = {
+		name = "GFX_decision_cat_generic_greater_finland"
+		texturefile = "gfx/interface/decisions/decision_cat_generic_greater_finland.dds"
+	}
+
+	spriteType = {
+		name = "GFX_decision_cat_generic_italian_empire"
+		texturefile = "gfx/interface/decisions/decision_cat_generic_italian_empire.dds"
+	}
+
+	spriteType = {
+		name = "GFX_decision_category_generic_religion"
+		texturefile = "gfx/interface/decisions/decision_category_generic_religion.dds"
+	}
+
+	spriteType = {
+		name = "GFX_decision_generic_religion"
+		texturefile = "gfx/interface/decisions/decision_generic_religion.dds"
+	}
+
+	spriteType = {
+		name = "GFX_decision_generic_festivities"
+		texturefile = "gfx/interface/decisions/decision_generic_festivities.dds"
+	}
+
+	spriteType = {
+		name = "GFX_decision_cat_generic_zapadoslavia"
+		texturefile = "gfx/interface/decisions/decision_cat_generic_zapadoslavia.dds"
+	}
+
+	spriteType = {
+		name = "GFX_decision_cat_SPR_instalaza_sa"
+		texturefile = "gfx/interface/decisions/decision_cat_SPR_instalaza_sa.dds"
+	}
+
+	spriteType = {
+		name = "GFX_decision_cat_BUL_vmz_sopot"
+		texturefile = "gfx/interface/decisions/decision_cat_BUL_vmz_sopot.dds"
+	}
+
+	spriteType = {
+		name = "GFX_decision_cat_SIA_chaiseri"
+		texturefile = "gfx/interface/decisions/decision_cat_SIA_chaiseri.dds"
+	}
+
+	spriteType = {
+		name = "GFX_decision_cat_HOL_nederlandse_spoorwegen"
+		texturefile = "gfx/interface/decisions/decision_cat_HOL_nederlandse_spoorwegen.dds"
+	}
+
+	spriteType = {
+		name = "GFX_decision_cat_ALB_hekurudha_shqiptare"
+		texturefile = "gfx/interface/decisions/decision_cat_ALB_hekurudha_shqiptare.dds"
+	}
+}
