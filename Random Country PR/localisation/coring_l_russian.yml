@@ -1,4 +1,17 @@
 ﻿l_russian:
+ integration:0 "Integration"
+ start_integration:0 "Start Integration"
+ finish_integration:0 "Finish Integration"
+ integration_ready_requirements:0 "To become integrated, state has to be neighbor of at least one of our cores or another state that has been integrated. If we are at war, we must also control all neigboring states. To integrate overseas states, we must have at least one coastal core state."
+ 
+ coring:0 "Coring"
+ start_coring:0 "Start Coring"
+ finish_coring:0 "Finish Coring"
+ coring_ready_requirements:0 "To become our core, state has to neighbour at least one of our cores. To core overseas, we need to control and have integrated all neighboring states. This process can only be done when at peace."
+ 
+ reenable_coring:0 "Reenable Coring"
+ reenable_coring_requirements:0 "Marked at least one state as not profitable to core"
+ 
  cor_sta.1.t:0 "Интеграция региона"
  cor_sta.1.d:0 "В одном из наших регионов начался процесс интеграции. Интегрированные области еще не являются полностью нашими, но они уже дают больше людских ресурсов. Мы можем выбрать между ускорением процесса за политическую силу или медленным, но бесплатным течением интеграции."
  cor_sta.1.a:0 "Мы должны интегрировать регион как можно скорее."
@@ -7,6 +20,7 @@
  cor_sta.1.b.t:0 "Станет интегрированным через 180 дней."
  cor_sta.1.c:0 "Пусть этот процесс будет естественным."
  cor_sta.1.c.t:0 "Станет интегрированным через год."
+ cor_sta.1.stop:0 "Exit Integration Process"
  
  cor_sta.2.t:0 "Регион(ы) интегрирован(-ы)"
  cor_sta.2.d:0 "Как минимум один из наших регионов стал интегрированным, увеличив людские ресурсы, получаемые с него."
@@ -20,6 +34,9 @@
  cor_sta.3.b.t:0 "Станет основным через 180 дней."
  cor_sta.3.c:0 "Пусть этот процесс будет естественным."
  cor_sta.3.c.t:0 "Станет основным через год."
+ cor_sta.3.d:0 "It's not profitable for us to core this state."
+ cor_sta.3.d.t:0 "will not become our core and we will never be asked again to core it."
+ cor_sta.3.stop:0 "Exit Coring Process"
  
  cor_sta.4.t:0 "Регион присоединен"
  cor_sta.4.d:0 "Как минимум один из наших регионов стал основным, давая нам больше людских ресурсов, слотов для строительства и права на этот регион, если мы вдруг потеряем его."
